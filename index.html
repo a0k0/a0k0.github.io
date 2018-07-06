@@ -33,6 +33,11 @@
       <h1 class="section-title">Illustration</h1>
       <div id="slider1" class="slider">
         <ul>
+          <li id="illustration05-thumb">
+            <button onclick="openModal($('#illustration05'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
           <li id="illustration04-thumb">
             <button onclick="openModal($('#illustration04'))">
               <h1 class="slider-title"></h1>
@@ -86,13 +91,13 @@
 
 
         <ul class="footer-nav">
-          <li><a href="https://twitter.com/a0k0">TWITTER</a></li>
-          <li><a href="https://a0k0.booth.pm/">WEB SHOP</a></li>
-          <li><a href="https://www.pixiv.net/fanbox/creator/274516">FAN BOX</a></li>
+          <li><a href="https://twitter.com/a0k0" target="_blank">TWITTER</a></li>
+          <li><a href="https://a0k0.booth.pm/" target="_blank">WEB SHOP</a></li>
+          <li><a href="https://www.pixiv.net/fanbox/creator/274516" target="_blank">FAN BOX</a></li>
         </ul>
       </div>
     </div>
-    
+
     <a href="#" class="scroll-up">top</a>
   </section>
 
@@ -241,7 +246,7 @@
     <div class="modal-content">
       <button class="close-btn" onclick="closeModal()"></button>
 
-      <article id="illustration04" class="modal-inner">
+      <article id="illustration05" class="modal-inner">
         <img src="img/illustration/hanarif.jpg" />
         <div class="text">
           <h1>CHEESE!</h1>
@@ -254,8 +259,7 @@
         </div>
       </article>
 
-
-      <article id="illustration03" class="modal-inner">
+      <article id="illustration04" class="modal-inner">
         <img src="img/illustration/underthesea.jpg" />
         <div class="text">
           <h1>UNDER THE SEA!</h1>
@@ -268,10 +272,24 @@
         </div>
       </article>
 
-      <article id="illustration02" class="modal-inner">
+      <article id="illustration03" class="modal-inner">
         <img src="img/illustration/hextech.jpg" />
         <div class="text">
           <h1>Hextech Lulu</h1>
+          <p class="category">
+            2017/8/13 / League of Legends / fan art
+          </p>
+          <p class="summary">
+            半オリジナルデザインのスキンを集めた同人誌、<br/>
+            「ルルコレ」用に描き下ろした作品。<br/>
+          </p>
+        </div>
+      </article>
+
+      <article id="illustration02" class="modal-inner">
+        <img src="img/illustration/lulucolle.jpg" />
+        <div class="text">
+          <h1>Lulu Collection</h1>
           <p class="category">
             2017/8/13 / League of Legends / fan art
           </p>
@@ -298,7 +316,7 @@
   </div>
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script>
   var wrapper, content, scrollSpeed, scrollEasing;

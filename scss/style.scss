@@ -118,7 +118,11 @@ hr {
   grid-template-rows: 100vh 100vh 100vh;
   -ms-grid-colmuns: 100vw 100vw 100vw;
   grid-template-columns: 100vw 100vw 100vw;
-  > * { overflow-y: auto; }
+  
+  > * {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 }
 
 .grid-col1 {

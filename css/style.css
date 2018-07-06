@@ -765,6 +765,7 @@ hr {
 /* line 121, ../scss/style.scss */
 .main-grid > * {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* line 124, ../scss/style.scss */
