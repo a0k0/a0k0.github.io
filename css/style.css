@@ -722,6 +722,8 @@ hr {
   .scroll-down, .scroll-up, .scroll-up,
   p br, .back, .large-title-subtitle {
     display: none; }
+  #top {
+    background-attachment: scroll; }
   .main-grid {
     display: block; }
     .main-grid > * {
