@@ -82,3 +82,28 @@
   right: 20px;
   transform: rotate(180deg);
 }
+
+
+@media screen and (max-width : 480px){
+  .slider {
+    margin-top: 10px;
+
+    ul {
+      flex-wrap: wrap;
+      margin-left: 20px;
+      margin-right: 20px;
+      width: calc(100vw - 25px);
+      button { opacity: 0 !important; }
+
+      li {
+        width: calc((100vw - 30px)/3 - 5px);
+        height: calc((100vw - 30px)/3 - 5px);
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+
+    }
+  }
+
+  .slider-nav-next, .slider-nav-prev { display: none !important; }
+}

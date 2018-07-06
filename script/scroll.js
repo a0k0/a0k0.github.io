@@ -196,10 +196,10 @@ function postContactToGoogle() {
     dataType: "xml",
     statusCode: {
       0: function() {
-        console.log('0');
+        openForm($('#thankyou'));
       },
       200: function() {
-        console.log('200');
+        openForm($('#thankyou'));
       }
     }
   });

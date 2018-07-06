@@ -6,6 +6,7 @@
 
 
 body {
+  background: red;
   background: $color-white;
   font-family: "Josefin Sans", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   font-weight: 400;
@@ -118,7 +119,7 @@ hr {
   grid-template-rows: 100vh 100vh 100vh;
   -ms-grid-colmuns: 100vw 100vw 100vw;
   grid-template-columns: 100vw 100vw 100vw;
-  
+
   > * {
     overflow-y: auto;
     overflow-x: hidden;
@@ -188,3 +189,42 @@ hr {
 .white { color: $color-white; }
 .red { color: $color-red; }
 .blue { color: $color-blue; }
+
+
+
+@media screen and (max-width : 480px){
+  body { overflow: auto; }
+
+  .scroll-down, .scroll-up,
+  p br, .back, .large-title-subtitle {
+    display: none;
+  }
+
+  .main-grid {
+    display: block;
+
+    > * {
+      overflow: auto;
+      min-height: 100vh;
+    }
+  }
+
+  .section-title {
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    &:before { display: none; }
+  }
+
+  .section-contents {
+    padding: 0 20px;
+  }
+
+  .large-title {
+    font-size: 26px;
+    letter-spacing: 3px;
+    margin: 20px 0 20px;
+  }
+
+  hr { margin: 20px 0; }
+}

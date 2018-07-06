@@ -190,3 +190,17 @@ button {
 
   &:hover { opacity: 1; }
 }
+
+@media screen and (max-width : 480px){
+  .grid-form > label, .en { display: none; }
+
+  .grid-form {
+    display: block;
+    > * { margin: 5px 0; }
+  }
+
+  .btn_f-blue {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
