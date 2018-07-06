@@ -182,7 +182,7 @@ function postContactToGoogle() {
   var name = $('#contact-name').val();
   var mail = $('#contact-mail').val();
   var type = $('#contact-type').val();
-  var message = $('#contact-message').html();
+  var message = $('#contact-message').val();
 
   $.ajax({
     url: "https://docs.google.com/forms/d/e/1FAIpQLScPsIKQrlmpZqFfBzOm52pM56E63gCxCaOjwbAAIpj_C6jZYw/formResponse",
