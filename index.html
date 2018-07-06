@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Poco</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+<header id="global-navigation">
+  <div class="menu-bar"></div>
+  <nav>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main-grid">
+  <section id="top" class="grid-col1 white" style="background-image: url('img/illustration/underthesea.jpg');">
+    <h1 class="main-title">POCO</h1>
+    <p class="main-summary">Illustration / Design</p>
+    <a href="#illustration" class="scroll-down white">scroll</a>
+  </section>
+
+  <section id="illustration" class="grid-col1">
+    <div class="section-inner">
+      <h1 class="section-title">Illustration</h1>
+      <div id="slider1" class="slider">
+        <ul>
+          <li id="illustration04-thumb">
+            <button onclick="openModal($('#illustration04'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+          <li id="illustration03-thumb">
+            <button onclick="openModal($('#illustration03'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+          <li id="illustration02-thumb">
+            <button onclick="openModal($('#illustration02'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+          <li id="illustration01-thumb">
+            <button onclick="openModal($('#illustration01'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+        </ul>
+        <button class="slider-nav-prev" onclick="slide($('#slider1'), 'prev')"></button>
+        <button class="slider-nav-next" onclick="slide($('#slider1'), 'next')"></button>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">scroll</a>
+  </section>
+
+  <section id="about" class="grid-col1">
+    <div class="section-inner">
+      <h1 class="section-title">About me</h1>
+      <div class="section-contents">
+        <h2 class="large-title">
+          AOKO
+          <span class="large-title-subtitle">Illustration / Design</span>
+        </h2>
+        <p class="des--l">
+          1992年2月2日 静岡生まれ。<br/>
+          桑沢デザイン研究所を卒業後、都内でWEBデザイナーとして勤務。<br/>
+          本業の傍ら、イラストレーター兼デザイナーとして活動中。
+        </p>
+        <p class="des--l">
+          個人の方からのイラストのご依頼（COMMISSION）、<br/>
+          その他デザインや企業からのご依頼、共に承っております。<br/>
+          以下のボタンよりお気軽にご相談ください。
+        </p>
+
+        <button class="btn_b-gray" onclick="openForm($('#commission'))">COMMISSION</button>
+        <button class="btn_b-gray" onclick="openForm($('#contact'))">CONTACT</button>
+
+
+
+        <ul class="footer-nav">
+          <li><a href="https://twitter.com/a0k0">TWITTER</a></li>
+          <li><a href="https://a0k0.booth.pm/">WEB SHOP</a></li>
+          <li><a href="https://www.pixiv.net/fanbox/creator/274516">FAN BOX</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <a href="#" class="scroll-up">top</a>
+  </section>
+
+  <aside id="commission" class="grid-col2" style="display:none;">
+    <div class="section-contents">
+      <button class="back" onclick="closeForm()"></button>
+      <h1 class="large-title blue">
+        COMMISSION
+        <span class="large-title-subtitle">個人の方からのご依頼</span>
+      </h1>
+      <p class="des--l">
+        1週間以内にご返信をさせていただきます。<br/>
+        以下の範囲に収まらないご依頼は別途 <button onclick="openForm($('#contact'))">CONTACT</button> よりご連絡ください。
+      </p>
+      <p class="des--m">
+        ※ 現在、納期は2週間〜1ヶ月程いただいております<br/>
+        ※ 著作権等の放棄はしておりません。ご依頼いただいた用途以外でのご使用はご遠慮ください。
+      </p>
+    </div>
+
+    <hr />
+
+    <form class="section-contents grid-form">
+      <label>お名前<span class="en">YOUR NAME</span></label>
+      <input id="commission-name" class="form" type="text" placeholder="Aoko" required />
+
+      <label>メールアドレス<span class="en">YOUR EMAIL</span></label>
+      <input id="commission-mail" class="form" type="email" placeholder="aoko@example.com" required />
+
+      <label>ご依頼内容<span class="en">COMMISSION TYPE</span></label>
+      <select id="commission-type" class="form" required>
+        <option selected="selected" disabled>Select type</option>
+        <optgroup label="For SNS (twitter/Facebook/LINE/etc.)">
+          <option value="SNS用アイコン">SNS用アイコン/icon（500px）　¥3,000</option>
+          <option value="SNS用ヘッダー">SNS用ヘッダー/header（500px*1500px）　¥5,000</option>
+        </optgroup>
+        <optgroup label="For Stream (twitch/etc.)">
+          <option value="配信用バナー">配信用バナー/twitch banner（640px*240px）　¥4,000</option>
+          <option value="配信用スタンプ">配信用スタンプ/twitch stamp（~150px）　¥500</option>
+        </optgroup>
+        <optgroup label="Others (wallpaper/etc.)">
+          <option value="小サイズ">小サイズ/small size（~300px）　¥2,000</option>
+          <option value="中サイズ">中サイズ/medium size（300px~1000px）　¥4,000</option>
+          <option value="大サイズ">大サイズ/large size（1000px~2000px）　¥8,000</option>
+          <option value="印刷用">印刷用/for print（2000px~）　¥10,000</option>
+          <option value="色紙">色紙/Illustboard（10cm）　¥3,000</option>
+        </optgroup>
+      </select>
+
+      <label>オプション<span class="en">OPTION</span></label>
+      <div id="commission-option" class="form checkbox">
+        <input value="背景あり" id="background" type="checkbox" />
+        <label for="background">背景あり<span class="en">/with background</span><span class="red">(+20%)</span></label>
+        <input value="キャラクター2名以上" id="multiple" type="checkbox" name="entry.1323144998" />
+        <label for="multiple">キャラクター2名以上<span class="en">/multiple character</span><span class="red">(+20%/1character)</span></label>
+        <input value="オリジナルキャラクターの作成" id="original" type="checkbox" name="entry.1323144998" />
+        <label for="original">オリジナルキャラクターの作成<span class="en">/character design</span><span class="red">(+¥5,000)</span></label>
+        <input value="文字入れ" id="lettering" type="checkbox" name="entry.132314499" />
+        <label for="lettering">お名前・ID等の文字入れ<span class="en">/lettering</span><span class="blue">(FREE)</span></label>
+        <input value="公開を許可" id="publication" type="checkbox" name="entry.1323144998" />
+        <label for="publication">作者Twitterや作品集での公開を許可<span class="en">/allow publication</span><span class="blue">(-5%)</span></label>
+      </div>
+
+      <label>お支払い方法<span class="en">PAYMENT METHOD</span></label>
+      <select id="commission-payment" class="form" required>
+        <option selected="selected" disabled>Select type</option>
+        <option value="Amazonギフト券">Amazonギフト券/amazon gift card</option>
+        <option value="銀行振込">銀行振込/bank transfer (¥10,000~)</option>
+        <option value="Paypal">Paypal (¥10,000~)</option>
+      </select>
+
+      <label>詳細内容<span class="en">DESCRIPTION</span></label>
+      <textarea id="commission-message" class="form" rows="8" placeholder="ご希望されるキャラクターやイラストの構図など、できるだけ詳細にご記入ください。" required></textarea>
+
+      <button class="btn_f-blue" type="button" onclick="postCommissionToGoogle()">SEND COMMISSION</button>
+    </form>
+  </aside>
+
+
+  <aside id="contact" class="grid-col2" style="display:none;">
+    <div class="section-contents">
+      <button class="back" onclick="closeForm()"></button>
+      <h1 class="large-title red">
+        CONTACT
+        <span class="large-title-subtitle">その他のお問い合わせ</span>
+      </h1>
+      <p class="des--l">
+        1週間以内にご返信をさせていただきます。<br/>
+        SNSアイコンのご依頼等、個人的なご依頼は <button onclick="openForm($('#commission'))">COMMISSION</button> よりご依頼ください。
+      </p>
+    </div>
+
+    <hr />
+
+    <form class="section-contents grid-form">
+      <label>お名前<span class="en">YOUR NAME</span></label>
+      <input id="contact-name" class="form" type="text" placeholder="Aoko" />
+
+      <label>メールアドレス<span class="en">YOUR EMAIL</span></label>
+      <input id="contact-mail" class="form" type="email" placeholder="aoko@example.com" />
+
+      <label>お問い合わせ内容<span class="en">CONTACT TYPE</span></label>
+      <select class="form">
+        <option id="contact-type" selected="selected" disabled>Select type</option>
+        <option value="イラストのご依頼">イラストのご依頼 / illustration order</option>
+        <option value="WEBデザインのご依頼">WEBデザインのご依頼 / web design order</option>
+        <option value="その他デザインのご依頼">その他デザインのご依頼 / other design order</option>
+        <option value="その他のお問い合わせ">その他のお問い合わせ / other</option>
+      </select>
+
+      <label>詳細内容<span class="en">MESSAGE</span></label>
+      <textarea id="contact-message" class="form" rows="8" placeholder="できるだけ詳細にご記入ください。"></textarea>
+
+      <button class="btn_f-blue" type="button" onclick="postContactToGoogle()">SEND MESSAGE</button>
+    </form>
+  </aside>
+
+  <aside id="thankyou" class="grid-col2">
+    <div class="section-inner">
+      <div class="section-contents">
+        <button class="back" onclick="closeForm()"></button>
+        <h1 class="large-title">THANK YOU<br/>FOR YOUR INQUIRY</h1>
+        <p class="des--l">
+          お問い合わせありがとうございました。<br/>
+          1週間以内を目安に、ご入力頂きましたアドレス宛にご返信させていただきます。<br/>
+          返答が無い場合は再度送信いただくか、
+          <a href="https://twitter.com/a0k0" target="_blank" class="blue">Twitter</a>
+          のDMよりお問い合わせください。
+        </p>
+      </div>
+    </div>
+  </aside>
+</main>
+
+
+
+
+
+
+<!-- modals -->
+
+
+<div class=" modal-container">
+  <div class="modal-wrapper">
+    <div class="modal-background" onclick="closeModal()"></div>
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()"></button>
+
+      <article id="illustration04" class="modal-inner">
+        <img src="img/illustration/hanarif.jpg" />
+        <div class="text">
+          <h1>CHEESE!</h1>
+          <p class="category">
+            2018/4/13 / League of Legends / fan art
+          </p>
+          <p class="summary">
+            公式イベント「花リフ2018」用に描き下ろした作品。
+          </p>
+        </div>
+      </article>
+
+
+      <article id="illustration03" class="modal-inner">
+        <img src="img/illustration/underthesea.jpg" />
+        <div class="text">
+          <h1>UNDER THE SEA!</h1>
+          <p class="category">
+            2017/12/29 / League of Legends / fan art
+          </p>
+          <p class="summary">
+            League of Legends 非公式カレンダーに寄稿した作品。
+          </p>
+        </div>
+      </article>
+
+      <article id="illustration02" class="modal-inner">
+        <img src="img/illustration/hextech.jpg" />
+        <div class="text">
+          <h1>Hextech Lulu</h1>
+          <p class="category">
+            2017/8/13 / League of Legends / fan art
+          </p>
+          <p class="summary">
+            半オリジナルデザインのスキンを集めた同人誌、<br/>
+            「ルルコレ」用に描き下ろした作品。<br/>
+          </p>
+        </div>
+      </article>
+
+      <article id="illustration01" class="modal-inner">
+        <img src="img/illustration/vastaya.png" />
+        <div class="text">
+          <h1>VASTAYA</h1>
+          <p class="category">
+            2017/4/15 / League of Legends / fan art
+          </p>
+          <p class="summary">
+            League of Legends の AhriとXayah を描いた作品。
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+  var wrapper, content, scrollSpeed, scrollEasing;
+  var currentContentNum, targetContentNum, targetPosition;
+  var canScroll = true;
+  var modalOpen = false;
+</script>
+
+<script src="script/scroll.js"></script>
+<script src="script/slider.js"></script>
+<script src="script/modal.js"></script>
+
+
+</body>
+</html>
