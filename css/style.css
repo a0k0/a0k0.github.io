@@ -272,13 +272,13 @@ a {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       margin-left: 20px;
-      margin-right: 20px;
-      width: calc(100vw - 25px); }
+      margin-right: 15px;
+      width: calc(100vw - 35px); }
       .slider ul button {
         opacity: 0 !important; }
       .slider ul li {
-        width: calc((100vw - 30px)/3 - 5px);
-        height: calc((100vw - 30px)/3 - 5px);
+        width: calc((100vw - 35px)/3 - 5px);
+        height: calc((100vw - 35px)/3 - 5px);
         margin-right: 5px;
         margin-bottom: 5px; }
   .slider-nav-next, .slider-nav-prev, .slider-nav-next {
