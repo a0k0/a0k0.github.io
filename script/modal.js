@@ -5,10 +5,8 @@ $(function() {
   $(".modal-inner").each( function(index, element) {
     var modalId = $(element).attr("id");
     var thumbId = modalId + "-thumb";
-    var imageUrl =  $(element).find("img").attr("src");
+    var imageUrl =  $(element).find(".thumbnail").attr("src");
     var title =  $(element).find("h1").html();
-
-    console.log($("#" + thumbId));
 
     $("#" + thumbId).css({
       "background-image": "url('"+ imageUrl +"')",

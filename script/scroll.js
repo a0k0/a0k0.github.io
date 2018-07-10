@@ -90,7 +90,7 @@ $(function(){
 
     // ScrollDownEvent
     function motionDown(){
-      if (currentContentNum < content.length - 1) {
+      if (currentContentNum < 3) {
         canScroll = false;
 
         $('input,textarea,select').blur();

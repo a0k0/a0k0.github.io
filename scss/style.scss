@@ -115,8 +115,8 @@ hr {
 .main-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100vh 100vh 100vh;
-  grid-template-rows: 100vh 100vh 100vh;
+  -ms-grid-rows: 100vh 100vh 100vh 100vh;
+  grid-template-rows: 100vh 100vh 100vh 100vh;
   -ms-grid-colmuns: 100vw 100vw 100vw;
   grid-template-columns: 100vw 100vw 100vw;
 

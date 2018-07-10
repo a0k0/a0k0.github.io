@@ -18,6 +18,15 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122073463-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-122073463-1');
+  </script>
 </head>
 <body>
 
@@ -74,6 +83,39 @@
         </ul>
         <button class="slider-nav-prev" onclick="slide($('#slider1'), 'prev')"></button>
         <button class="slider-nav-next" onclick="slide($('#slider1'), 'next')"></button>
+      </div>
+    </div>
+    <a href="#project" class="scroll-down">scroll</a>
+  </section>
+
+  <section id="project" class="grid-col1">
+    <div class="section-inner">
+      <h1 class="section-title">Project</h1>
+      <div id="slider2" class="slider">
+        <ul>
+          <li id="project04-thumb">
+            <button onclick="openModal($('#project03'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+          <li id="project03-thumb">
+            <button onclick="openModal($('#project03'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+          <li id="project02-thumb">
+            <button onclick="openModal($('#project02'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+          <li id="project01-thumb">
+            <button onclick="openModal($('#project01'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+        </ul>
+        <button class="slider-nav-prev" onclick="slide($('#slider2'), 'prev')"></button>
+        <button class="slider-nav-next" onclick="slide($('#slider2'), 'next')"></button>
       </div>
     </div>
     <a href="#about" class="scroll-down">scroll</a>
@@ -253,78 +295,150 @@
 <!-- modals -->
 
 
-<div class=" modal-container">
+<div class="modal-container">
   <div class="modal-wrapper">
     <div class="modal-background" onclick="closeModal()"></div>
     <div class="modal-content">
       <button class="close-btn" onclick="closeModal()"></button>
 
-      <article id="illustration05" class="modal-inner">
-        <img src="img/illustration/hanarif.jpg" />
-        <div class="text">
-          <h1>CHEESE!</h1>
-          <p class="category">
-            2018/4/13 / League of Legends / fan art
-          </p>
-          <p class="summary">
-            公式イベント「花リフ2018」用に描き下ろした作品。
-          </p>
-        </div>
-      </article>
+      <section class="illustrations">
+        <article id="illustration05" class="modal-inner">
+          <img src="img/illustration/hanarif.jpg" alt="花リフ2018「CHEESE!」" class="thumbnail main" />
+          <div class="text">
+            <h1>CHEESE!</h1>
+            <p class="category">
+              2018/4/13 / League of Legends / fan art
+            </p>
+            <p class="summary">
+              公式イベント「花リフ2018」用に描き下ろした作品。
+            </p>
+          </div>
+        </article>
 
-      <article id="illustration04" class="modal-inner">
-        <img src="img/illustration/underthesea.jpg" />
-        <div class="text">
-          <h1>UNDER THE SEA!</h1>
-          <p class="category">
-            2017/12/29 / League of Legends / fan art
-          </p>
-          <p class="summary">
-            League of Legends 非公式カレンダーに寄稿した作品。
-          </p>
-        </div>
-      </article>
+        <article id="illustration04" class="modal-inner">
+          <img src="img/illustration/underthesea.jpg" alt="Pool party「UNDER THE SEA!」" class="thumbnail main" />
+          <div class="text">
+            <h1>UNDER THE SEA!</h1>
+            <p class="category">
+              2017/12/29 / League of Legends / fan art
+            </p>
+            <p class="summary">
+              League of Legends 非公式カレンダーに寄稿した作品。
+            </p>
+          </div>
+        </article>
 
-      <article id="illustration03" class="modal-inner">
-        <img src="img/illustration/hextech.jpg" />
-        <div class="text">
-          <h1>Hextech Lulu</h1>
-          <p class="category">
-            2017/8/13 / League of Legends / fan art
-          </p>
-          <p class="summary">
-            半オリジナルデザインのスキンを集めた同人誌、<br/>
-            「ルルコレ」用に描き下ろした作品。<br/>
-          </p>
-        </div>
-      </article>
+        <article id="illustration03" class="modal-inner">
+          <img src="img/illustration/hextech.jpg" alt="Hextech Lulu / ルルコレ" class="thumbnail main" />
+          <div class="text">
+            <h1>Hextech Lulu</h1>
+            <p class="category">
+              2017/8/13 / League of Legends / fan art
+            </p>
+            <p class="summary">
+              半オリジナルデザインのスキンを集めた同人誌、<br/>
+              「ルルコレ」用に描き下ろした作品。<br/>
+            </p>
+          </div>
+        </article>
 
-      <article id="illustration02" class="modal-inner">
-        <img src="img/illustration/lulucolle.jpg" />
-        <div class="text">
-          <h1>Lulu Collection</h1>
-          <p class="category">
-            2017/8/13 / League of Legends / fan art
-          </p>
-          <p class="summary">
-            半オリジナルデザインのスキンを集めた同人誌、<br/>
-            「ルルコレ」用に描き下ろした作品。<br/>
-          </p>
-        </div>
-      </article>
+        <article id="illustration02" class="modal-inner">
+          <img src="img/illustration/lulucolle.jpg" alt="Lulu Collection / ルルコレ" class="thumbnail main" />
+          <div class="text">
+            <h1>Lulu Collection</h1>
+            <p class="category">
+              2017/8/13 / League of Legends / fan art
+            </p>
+            <p class="summary">
+              半オリジナルデザインのスキンを集めた同人誌、<br/>
+              「ルルコレ」用に描き下ろした作品。<br/>
+            </p>
+          </div>
+        </article>
 
-      <article id="illustration01" class="modal-inner">
-        <img src="img/illustration/vastaya.png" />
-        <div class="text">
-          <h1>VASTAYA</h1>
-          <p class="category">
-            2017/4/15 / League of Legends / fan art
-          </p>
-          <p class="summary">
-            League of Legends の AhriとXayah を描いた作品。
-          </p>
-        </div>
-      </article>
+        <article id="illustration01" class="modal-inner">
+          <img src="img/illustration/vastaya.png" alt="VASTAYA / Ahri & Xayah" class="thumbnail main" />
+          <div class="text">
+            <h1>VASTAYA</h1>
+            <p class="category">
+              2017/4/15 / League of Legends / fan art
+            </p>
+            <p class="summary">
+              League of Legends の AhriとXayah を描いた作品。
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="projects">
+
+        <article id="project04" class="modal-inner">
+          <img src="img/project/poco-t.png" alt="poco aoko" class="thumbnail" />
+          <img src="img/project/poco-m.png" alt="poco aoko" class="main" />
+          <div class="text">
+            <h1>poco</h1>
+            <p class="category">
+              2018/7/7 / Portfirio / Web design & Programing
+            </p>
+            <p class="summary">
+              ポートフォリオサイト poco（当サイト）を制作しました。<br/>
+              HTML/css/jQueryを使って開発後、GitHub Pagesで公開しています。
+            </p>
+          </div>
+        </article>
+
+        <article id="project03" class="modal-inner">
+          <img src="img/project/baronbuff-t.png" alt="baronbuff.gg" class="thumbnail" />
+          <a href="http://baronbuff.gg" target="_blank">
+            <img src="img/project/baronbuff-m.png" alt="baronbuff.gg" class="main" />
+          </a>
+          <div class="text">
+            <h1>BaronBuff.GG</h1>
+            <p class="category">
+              2018/3/20 / League of Legends / Web design (Adobe XD)
+            </p>
+            <p class="summary">
+              League of Legends の 非公式統計サイト、<br/>
+              <a href="http://baronbuff.gg" target="_blank">BaronBuff.GG</a> のデザインを担当しました。
+            </p>
+          </div>
+        </article>
+
+        <article id="project02" class="modal-inner">
+          <img src="img/project/luluchan-t.png" alt="discord bot るるちゃんは見ている" class="thumbnail" />
+          <a href="http://luluchan.herokuapp.com/" target="_blank">
+            <img src="img/project/luluchan-m.png" alt="discord bot るるちゃんは見ている" class="main" />
+          </a>
+          <div class="text">
+            <h1>るるちゃんは見ている</h1>
+            <p class="category">
+              2017/8/23 / Discord bot / Programing (Node.js x Heroku)
+            </p>
+            <p class="summary">
+              RIOT GAMES APIを使用し、LoLの対戦相手と味方チームのレートや<br/>
+              プレイヤーの情報を表示する Discord bot
+              <a href="http://luluchan.herokuapp.com/" target="_blank">るるちゃんは見ている</a> を制作しました。
+            </p>
+          </div>
+        </article>
+
+        <article id="project01" class="modal-inner">
+          <img src="img/project/alice-t.png" alt="十三人のアリス" class="thumbnail" />
+          <a href="https://a0k0.booth.pm/items/69813" target="_blank">
+            <img src="img/project/alice-m.png" alt="十三人のアリス" class="main" />
+          </a>
+          <div class="text">
+            <h1>十三人のアリス</h1>
+            <p class="category">
+              2015/2/2 / Original Book (Anthology) / 企画・お話・イラスト
+            </p>
+            <p class="summary">
+              13名のアーティストを集め、アリスの世界を描いたアンソロジー絵本。<br/>
+              BOOTH にて販売中です　→　<a href="https://a0k0.booth.pm/items/69813" target="_blank">十三人のアリス</a><br/>
+              参加作家：紅林大空・茶川描・にっけ 他
+            </p>
+          </div>
+        </article>
+      </section>
     </div>
   </div>
 </div>
