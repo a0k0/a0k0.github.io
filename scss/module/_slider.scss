@@ -45,6 +45,13 @@
   }
 }
 
+#slider2 {
+  li {
+    width: calc((100vw - 140px)/4 - 10px);
+    height: calc((100vw - 140px)/4 - 10px);
+  }
+}
+
 .slider-nav-prev {
   display: block;
   width: 40px;
@@ -53,7 +60,7 @@
   left: 20px;
   top: 50%;
   margin-top: -20px;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: 0.2s;
 
   &:before, &:after {
@@ -102,6 +109,13 @@
         margin-bottom: 5px;
       }
 
+    }
+  }
+
+  #slider2 {
+    li {
+      width: calc((100vw - 35px)/3 - 5px);
+      height: calc((100vw - 35px)/3 - 5px);
     }
   }
 

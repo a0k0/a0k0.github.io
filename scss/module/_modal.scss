@@ -103,12 +103,17 @@
   }
 
   .modal-inner {
+    max-width: calc(100vw - 40px);
     h1, .category, .summary { display: none; }
 
-    img {
+    .main {
       display: block;
       max-height: calc(100vh - 40px);
       max-width: calc(100vw - 40px);
     }
+  }
+
+  .projects .modal-inner {
+    h1, .category, .summary { display: block; }
   }
 }
