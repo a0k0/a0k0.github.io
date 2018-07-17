@@ -763,15 +763,14 @@ body {
   color: #626262;
   position: relative;
   overflow: hidden;
-  visibility: hidden;
 }
 
-/* line 21, ../scss/style.scss */
+/* line 20, ../scss/style.scss */
 section, aside {
   position: relative;
 }
 
-/* line 25, ../scss/style.scss */
+/* line 24, ../scss/style.scss */
 hr {
   border: 0;
   border-top: 1px solid #d8d8d8;
@@ -779,7 +778,7 @@ hr {
   width: 100vw;
 }
 
-/* line 32, ../scss/style.scss */
+/* line 31, ../scss/style.scss */
 .scroll-down, .scroll-up {
   position: absolute;
   bottom: 30px;
@@ -787,7 +786,7 @@ hr {
   transform: translateX(-50%);
   font-size: 10px;
 }
-/* line 39, ../scss/style.scss */
+/* line 38, ../scss/style.scss */
 .scroll-down:after, .scroll-up:after {
   content: "";
   display: block;
@@ -802,24 +801,24 @@ hr {
   border-bottom-color: #a5a5a5;
   transform: rotate(45deg) translateX(-50%);
 }
-/* line 54, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 .scroll-down.white:after, .white.scroll-up:after {
   border-right-color: #fff;
   border-bottom-color: #fff;
 }
 
-/* line 63, ../scss/style.scss */
+/* line 62, ../scss/style.scss */
 .scroll-up:after {
   bottom: 0px;
   transform: rotate(-135deg) translateX(50%);
 }
 
-/* line 69, ../scss/style.scss */
+/* line 68, ../scss/style.scss */
 #global-navigation {
   position: fixed;
 }
 
-/* line 73, ../scss/style.scss */
+/* line 72, ../scss/style.scss */
 .section-inner {
   position: absolute;
   top: 50%;
@@ -827,7 +826,7 @@ hr {
   transform: translateY(-50%);
 }
 
-/* line 80, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 .section-title {
   font-size: 16px;
   position: relative;
@@ -836,7 +835,7 @@ hr {
   letter-spacing: 3px;
   padding-left: 80px;
 }
-/* line 88, ../scss/style.scss */
+/* line 87, ../scss/style.scss */
 .section-title:before {
   content: "";
   display: block;
@@ -847,26 +846,26 @@ hr {
   border-top: 2px solid #d8d8d8;
 }
 
-/* line 99, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 .section-contents {
   padding-left: 80px;
 }
 
-/* line 103, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .large-title {
   font-size: 30px;
   letter-spacing: 18px;
   margin: 40px 0 30px;
 }
 
-/* line 109, ../scss/style.scss */
+/* line 108, ../scss/style.scss */
 .large-title-subtitle {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 2px;
 }
 
-/* line 115, ../scss/style.scss */
+/* line 114, ../scss/style.scss */
 .main-grid {
   display: -ms-grid;
   display: grid;
@@ -875,31 +874,31 @@ hr {
   -ms-grid-colmuns: 100vw 100vw 100vw;
   grid-template-columns: 100vw 100vw 100vw;
 }
-/* line 123, ../scss/style.scss */
+/* line 122, ../scss/style.scss */
 .main-grid > * {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-/* line 129, ../scss/style.scss */
+/* line 128, ../scss/style.scss */
 .grid-col1 {
   -ms-grid-column: 1;
   grid-column: 1;
 }
 
-/* line 134, ../scss/style.scss */
+/* line 133, ../scss/style.scss */
 .grid-col2 {
   -ms-grid-column: 2;
   grid-column: 2;
 }
 
-/* line 139, ../scss/style.scss */
+/* line 138, ../scss/style.scss */
 #top {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
-/* line 144, ../scss/style.scss */
+/* line 143, ../scss/style.scss */
 #top .main-title {
   font-weight: 600;
   letter-spacing: 40px;
@@ -913,7 +912,7 @@ hr {
   margin: 0;
   text-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
 }
-/* line 158, ../scss/style.scss */
+/* line 157, ../scss/style.scss */
 #top .main-summary {
   position: absolute;
   font-weight: 400;
@@ -928,91 +927,91 @@ hr {
   text-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* line 173, ../scss/style.scss */
+/* line 172, ../scss/style.scss */
 .footer-nav {
   font-size: 12px;
   margin-top: 30px;
 }
-/* line 177, ../scss/style.scss */
+/* line 176, ../scss/style.scss */
 .footer-nav li {
   display: inline;
   margin-right: 20px;
 }
-/* line 182, ../scss/style.scss */
+/* line 181, ../scss/style.scss */
 .footer-nav a {
   text-decoration: underline;
 }
-/* line 184, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 .footer-nav a:hover {
   text-decoration: none;
 }
 
-/* line 189, ../scss/style.scss */
+/* line 188, ../scss/style.scss */
 .white {
   color: #fff;
 }
 
-/* line 190, ../scss/style.scss */
+/* line 189, ../scss/style.scss */
 .red {
   color: #ff5a85;
 }
 
-/* line 191, ../scss/style.scss */
+/* line 190, ../scss/style.scss */
 .blue {
   color: #53C4FF;
 }
 
 @media screen and (max-width: 480px) {
-  /* line 196, ../scss/style.scss */
+  /* line 195, ../scss/style.scss */
   body {
     overflow: auto;
   }
 
-  /* line 198, ../scss/style.scss */
+  /* line 197, ../scss/style.scss */
   .scroll-down, .scroll-up, .scroll-up,
   p br, .back, .large-title-subtitle {
     display: none;
   }
 
-  /* line 203, ../scss/style.scss */
+  /* line 202, ../scss/style.scss */
   #top {
     background-attachment: scroll;
   }
 
-  /* line 207, ../scss/style.scss */
+  /* line 206, ../scss/style.scss */
   .main-grid {
     display: block;
   }
-  /* line 210, ../scss/style.scss */
+  /* line 209, ../scss/style.scss */
   .main-grid > * {
     overflow: auto;
     min-height: 100vh;
   }
 
-  /* line 216, ../scss/style.scss */
+  /* line 215, ../scss/style.scss */
   .section-title {
     font-size: 16px;
     letter-spacing: 1px;
     padding: 0 20px;
   }
-  /* line 220, ../scss/style.scss */
+  /* line 219, ../scss/style.scss */
   .section-title:before {
     display: none;
   }
 
-  /* line 223, ../scss/style.scss */
+  /* line 222, ../scss/style.scss */
   .section-contents {
     padding: 0 20px;
   }
 
-  /* line 227, ../scss/style.scss */
+  /* line 226, ../scss/style.scss */
   .large-title {
     font-size: 26px;
     letter-spacing: 3px;
     margin: 20px 0 20px;
   }
 
-  /* line 233, ../scss/style.scss */
+  /* line 232, ../scss/style.scss */
   hr {
     margin: 20px 0;
   }
