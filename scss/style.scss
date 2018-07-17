@@ -6,7 +6,6 @@
 
 
 body {
-  background: red;
   background: $color-white;
   font-family: "Josefin Sans", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   font-weight: 400;
@@ -14,7 +13,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $color-dark;
   position: relative;
-  overflow: hidden;
 }
 
 section, aside {
