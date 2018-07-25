@@ -29,6 +29,12 @@ function openModal(elem) {
   modalContainer.fadeIn(400);
   canScroll = false;
   modalOpen = true;
+
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'openModal',
+    eventAction: 'open' + elem.attr("id")
+  });
 }
 
 function closeModal() {

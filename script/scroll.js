@@ -28,6 +28,12 @@ $(function(){
         currentContentNum = $('body,html').scrollTop() / $(window).height();
       });
 
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'ankerLink',
+        eventAction: href
+      });
+
       setTimeout( function(){ location.hash = href;} ,scrollSpeed );
       return false;
    });
@@ -85,6 +91,12 @@ $(function(){
           setTimeout(function(){ canScroll = true; }, 500);
           currentContentNum = targetContentNum;
         });
+
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'ankerLink',
+          eventAction: hash
+        });
       }
     }
 
@@ -103,6 +115,12 @@ $(function(){
           location.hash = hash;
           setTimeout(function(){ canScroll = true; }, 500);
           currentContentNum = targetContentNum;
+        });
+
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'ankerLink',
+          eventAction: hash
         });
       }
     }
