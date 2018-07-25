@@ -30,12 +30,12 @@ function openModal(elem) {
   canScroll = false;
   modalOpen = true;
 
-  ga('send', {
-    hitType: 'event',
+  ga('send', 'event', {
     eventCategory: 'modal',
     eventAction: 'click',
     eventLabel: elem.attr("id")
   });
+
 }
 
 function closeModal() {

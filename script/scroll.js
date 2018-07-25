@@ -28,11 +28,10 @@ $(function(){
         currentContentNum = $('body,html').scrollTop() / $(window).height();
       });
 
-      ga('send', {
-        hitType: 'event',
+      ga('send', 'event', {
         eventCategory: 'ankerLink',
         eventAction: 'click',
-        eventLabel: href
+        eventLabel: hash
       });
 
       setTimeout( function(){ location.hash = href;} ,scrollSpeed );
@@ -95,8 +94,7 @@ $(function(){
           currentContentNum = targetContentNum;
         });
 
-        ga('send', {
-          hitType: 'event',
+        ga('send', 'event', {
           eventCategory: 'ankerLink',
           eventAction: 'scroll',
           eventLabel: hash
@@ -122,8 +120,7 @@ $(function(){
           currentContentNum = targetContentNum;
         });
 
-        ga('send', {
-          hitType: 'event',
+        ga('send', 'event', {
           eventCategory: 'ankerLink',
           eventAction: 'scroll',
           eventLabel: hash
