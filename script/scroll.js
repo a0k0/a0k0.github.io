@@ -98,7 +98,7 @@ $(function(){
         ga('send', {
           hitType: 'event',
           eventCategory: 'ankerLink',
-          eventAction: 'click',
+          eventAction: 'scroll',
           eventLabel: hash
         });
       }
@@ -125,7 +125,7 @@ $(function(){
         ga('send', {
           hitType: 'event',
           eventCategory: 'ankerLink',
-          eventAction: 'click',
+          eventAction: 'scroll',
           eventLabel: hash
         });
       }
