@@ -32,8 +32,9 @@ function openModal(elem) {
 
   ga('send', {
     hitType: 'event',
-    eventCategory: 'openModal',
-    eventAction: 'open' + elem.attr("id")
+    eventCategory: 'modal',
+    eventAction: 'click',
+    eventLabel: elem.attr("id")
   });
 }
 

@@ -31,7 +31,8 @@ $(function(){
       ga('send', {
         hitType: 'event',
         eventCategory: 'ankerLink',
-        eventAction: href
+        eventAction: 'click',
+        eventLabel: href
       });
 
       setTimeout( function(){ location.hash = href;} ,scrollSpeed );
@@ -83,6 +84,8 @@ $(function(){
         $('input,textarea,select').blur();
         targetContentNum = currentContentNum - 1;
         targetPosition = content.eq(targetContentNum).offset().top;
+        var hash = content.eq(targetContentNum).attr("id");
+
         $('body,html').animate({
           scrollTop: targetPosition
         }, scrollSpeed, scrollEasing, function(){
@@ -95,7 +98,8 @@ $(function(){
         ga('send', {
           hitType: 'event',
           eventCategory: 'ankerLink',
-          eventAction: hash
+          eventAction: 'click',
+          eventLabel: hash
         });
       }
     }
@@ -108,10 +112,11 @@ $(function(){
         $('input,textarea,select').blur();
         targetContentNum = currentContentNum + 1;
         targetPosition = content.eq(targetContentNum).offset().top;
+        var hash = content.eq(targetContentNum).attr("id");
+
         $('body,html').animate({
           scrollTop: targetPosition
         }, scrollSpeed, scrollEasing, function(){
-          var hash = content.eq(targetContentNum).attr("id");
           location.hash = hash;
           setTimeout(function(){ canScroll = true; }, 500);
           currentContentNum = targetContentNum;
@@ -120,7 +125,8 @@ $(function(){
         ga('send', {
           hitType: 'event',
           eventCategory: 'ankerLink',
-          eventAction: hash
+          eventAction: 'click',
+          eventLabel: hash
         });
       }
     }
