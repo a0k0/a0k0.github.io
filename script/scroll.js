@@ -31,7 +31,7 @@ $(function(){
       ga('send', 'event', {
         eventCategory: 'ankerLink',
         eventAction: 'click',
-        eventLabel: hash
+        eventLabel: href
       });
 
       setTimeout( function(){ location.hash = href;} ,scrollSpeed );
