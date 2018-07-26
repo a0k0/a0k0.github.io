@@ -96,7 +96,7 @@ $(function(){
 
         gtag('event', 'scroll_page', {
           'event_category' : 'pageview',
-          'event_label' : hash,
+          'event_label' : '#' + hash,
           'non_interaction': true
         });
       }
@@ -122,7 +122,7 @@ $(function(){
 
         gtag('event', 'scroll_page', {
           'event_category' : 'pageview',
-          'event_label' : hash,
+          'event_label' : '#' + hash,
           'non_interaction': true
         });
       }
