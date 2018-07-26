@@ -28,10 +28,10 @@ $(function(){
         currentContentNum = $('body,html').scrollTop() / $(window).height();
       });
 
-      ga('send', 'event', {
-        eventCategory: 'ankerLink',
-        eventAction: 'click',
-        eventLabel: href
+      gtag('event', 'click_ankerlink', {
+        'event_category' : 'pageview',
+        'event_label' : href,
+        'non_interaction': true
       });
 
       setTimeout( function(){ location.hash = href;} ,scrollSpeed );
@@ -94,10 +94,10 @@ $(function(){
           currentContentNum = targetContentNum;
         });
 
-        ga('send', 'event', {
-          eventCategory: 'ankerLink',
-          eventAction: 'scroll',
-          eventLabel: hash
+        gtag('event', 'scroll_page', {
+          'event_category' : 'pageview',
+          'event_label' : hash,
+          'non_interaction': true
         });
       }
     }
@@ -120,10 +120,10 @@ $(function(){
           currentContentNum = targetContentNum;
         });
 
-        ga('send', 'event', {
-          eventCategory: 'ankerLink',
-          eventAction: 'scroll',
-          eventLabel: hash
+        gtag('event', 'scroll_page', {
+          'event_category' : 'pageview',
+          'event_label' : hash,
+          'non_interaction': true
         });
       }
     }

@@ -30,10 +30,9 @@ function openModal(elem) {
   canScroll = false;
   modalOpen = true;
 
-  ga('send', 'event', {
-    eventCategory: 'modal',
-    eventAction: 'click',
-    eventLabel: elem.attr("id")
+  gtag('event', 'open_modal', {
+    'event_category' : 'pageview',
+    'event_label' : hash
   });
 
 }
