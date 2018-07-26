@@ -143,6 +143,11 @@ function openForm(page) {
   }, scrollSpeed, scrollEasing , function(){
     location.hash = page.attr("id");
   });
+
+  gtag('event', 'open_form', {
+    'event_category' : 'pageview',
+    'event_label' : page.attr("id")
+  });
 }
 
 function closeForm() {
@@ -188,9 +193,19 @@ function postCommissionToGoogle() {
     statusCode: {
       0: function() {
         openForm($('#thankyou'));
+
+        gtag('event', 'submit_form', {
+          'event_category' : 'engagement',
+          'event_label' : 'commission'
+        });
       },
       200: function() {
         openForm($('#thankyou'));
+
+        gtag('event', 'submit_form', {
+          'event_category' : 'engagement',
+          'event_label' : 'commission'
+        });
       }
     }
   });
@@ -215,9 +230,19 @@ function postContactToGoogle() {
     statusCode: {
       0: function() {
         openForm($('#thankyou'));
+
+        gtag('event', 'submit_form', {
+          'event_category' : 'engagement',
+          'event_label' : 'contact'
+        });
       },
       200: function() {
         openForm($('#thankyou'));
+
+        gtag('event', 'submit_form', {
+          'event_category' : 'engagement',
+          'event_label' : 'contact'
+        });
       }
     }
   });

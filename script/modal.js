@@ -32,9 +32,8 @@ function openModal(elem) {
 
   gtag('event', 'open_modal', {
     'event_category' : 'pageview',
-    'event_label' : hash
+    'event_label' : elem.attr("id")
   });
-
 }
 
 function closeModal() {
