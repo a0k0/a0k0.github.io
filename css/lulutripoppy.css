@@ -853,7 +853,7 @@ section {
 }
 /* line 95, ../scss/lulutripoppy.scss */
 #summary {
-  background: #f4e827;
+  background: #ffee66;
 }
 /* line 98, ../scss/lulutripoppy.scss */
 #summary::before {
@@ -864,7 +864,7 @@ section {
   height: 5vw;
   left: -2.5vw;
   right: -2.5vw;
-  background: radial-gradient(circle, #f4e827 70%, rgba(0, 0, 0, 0) 72%);
+  background: radial-gradient(circle, #ffee66 70%, rgba(0, 0, 0, 0) 72%);
   background-size: 5vw;
 }
 /* line 110, ../scss/lulutripoppy.scss */
