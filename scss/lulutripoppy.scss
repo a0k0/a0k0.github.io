@@ -4,10 +4,11 @@
 @import "module/form";
 @import "module/modal";
 
-$color-poppy: #b0eeff;
+$color-sky: #b0eeff;
+$color-poppy: #00bdf1;
 $color-lulu: #ea6da4;
 $color-tris: #f4e827;
-$color-purple: #a688bd;
+$color-purple: #4a528c;
 
 body, html {
   background: $color-white;
@@ -15,7 +16,7 @@ body, html {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $color-dark;
+  color: $color-purple;
   position: relative;
   animation: fadein 1s ease-in 1 forwards;
 }
@@ -38,13 +39,13 @@ section { position: relative; }
 .main-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100vh 100vh;
-  grid-template-rows: 100vh 100vh;
+  -ms-grid-rows: 100vh 100vh 100vh;
+  grid-template-rows: 100vh 100vh 100vh;
 }
 
 .float-white-container {
   background: $color-white;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   padding: 40px;
   border-radius: 10px;
@@ -52,13 +53,16 @@ section { position: relative; }
 
   .image-title {
     margin: 0;
-    height: 20px;
+    height: 10px;
+    text-align: center;
 
     img {
-      margin: -140px 0 0 0;
+      margin: -140px 0 0 -5px;
       transform: scale(0.5);
     }
   }
+
+  &.large { max-width: 700px; }
 }
 
 
@@ -66,10 +70,10 @@ section { position: relative; }
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  //background-image: url('../img/lulutripoppy/bg01.jpg');
+  background-image: url('../img/lulutripoppy/bg01.jpg');
 
   #logo {
-    //background-image: url('../img/lulutripoppy/logo-sprite.png');
+    background-image: url('../img/lulutripoppy/logo-sprite.png');
     background-size: 600px;
     width: 600px;
     height: 175px;
@@ -89,7 +93,7 @@ section { position: relative; }
 }
 
 #summary {
-  background: $color-poppy;
+  background: $color-tris;
 
   &::before {
     content: "";
@@ -99,7 +103,7 @@ section { position: relative; }
     height: 5vw;
     left: -2.5vw;
     right: -2.5vw;
-    background: radial-gradient(circle, $color-poppy 70%, transparent 72% );
+    background: radial-gradient(circle, $color-tris 70%, transparent 72% );
     background-size: 5vw;
   }
 
@@ -108,14 +112,13 @@ section { position: relative; }
     display: flex;
     -webkit-align-items: center;
     align-items: center;
-    justify-content: space-around;
   }
 
   .cover {
     box-shadow: 0 0 5px rgba($color-purple, 0.3);
     width: 150px;
     transform: rotate(-2deg);
-    margin: 0 35px 0 20px;
+    margin: 20px 40px 20px 30px;
   }
 
   dl {
@@ -139,7 +142,57 @@ section { position: relative; }
       font-family: "vdl-megamaru", sans-serif;
     }
   }
+}
 
+#member {
+  background: $color-sky;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2.5vw;
+    height: 5vw;
+    left: -2.5vw;
+    right: -2.5vw;
+    background: radial-gradient(circle, $color-sky 70%, transparent 72% );
+    background-size: 5vw;
+  }
+
+  .members {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr;
+    margin: 15px 10px;
+
+    li { margin-bottom: 10px;}
+
+    .icon {
+      float: left;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      overflow: hidden;
+      text-align: center;
+      margin-right: 15px;
+      img { width: 100%; }
+    }
+
+    p {
+      margin: 10px 0 5px;;
+      font-size: 13px;
+      &.blue { color: $color-poppy; }
+      &.pink { color: $color-lulu; }
+    }
+
+    h3 {
+      font-size: 15px;
+      margin: 0;
+      font-weight: normal;
+      font-family: "vdl-megamaru", sans-serif;
+    }
+  }
 }
 
 @media screen and (max-width : 480px){
