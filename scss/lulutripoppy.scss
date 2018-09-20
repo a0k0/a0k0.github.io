@@ -39,8 +39,8 @@ section { position: relative; }
 .main-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100vh 100vh 100vh;
-  grid-template-rows: 100vh 100vh 100vh;
+  -ms-grid-rows: 100vh 100vh 100vh 100vh;
+  grid-template-rows: 100vh 100vh 100vh 100vh;
 }
 
 .float-white-container {
@@ -192,6 +192,27 @@ section { position: relative; }
       font-weight: normal;
       font-family: "vdl-megamaru", sans-serif;
     }
+  }
+}
+
+#wait {
+  background: $color-lulu;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: $color-white;
+  font-family: "vdl-megamaru", sans-serif;
+  h2 { text-align: center;}
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2.5vw;
+    height: 5vw;
+    left: -2.5vw;
+    right: -2.5vw;
+    background: radial-gradient(circle, $color-lulu 70%, transparent 72% );
+    background-size: 5vw;
   }
 }
 
