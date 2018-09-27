@@ -59,8 +59,8 @@
       scene.add(ambientLight);
 
       const loader = new THREE.ColladaLoader();
-      loader.setPath('model/lulu/');
-      loader.load('model/lulu/lulu1.dae', (collada) => {
+      loader.setPath('model/');
+      loader.load('lulu/lulu1.dae', (collada) => {
         const model = collada.scene;
         scene.add(model);
       });
