@@ -36,11 +36,11 @@
 			| Dancing Stormtrooper by <a href="https://sketchfab.com/strykerdoesgames" target="_blank" rel="noopener">StrykerDoesAnimation</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC Attribution</a>
 		</div>
 
-		<script src="js/three.min.js"></script>
-		<script src="js/ColladaLoader.js"></script>
-		<script src="js/OrbitControls.js"></script>
+		<script src="../build/three.js"></script>
+		<script src="js/loaders/ColladaLoader.js"></script>
+		<script src="js/controls/OrbitControls.js"></script>
 		<script src="js/WebGL.js"></script>
-		<script src="js/stats.min.js"></script>
+		<script src="js/libs/stats.min.js"></script>
 
 		<script>
 
@@ -70,7 +70,7 @@
 				// collada
 
 				var loader = new THREE.ColladaLoader();
-				loader.load( "model/stormtrooper/stormtrooper.dae", function ( collada ) {
+				loader.load( './models/collada/lulu1/lulu1.dae', function ( collada ) {
 
 					var animations = collada.animations;
 					var avatar = collada.scene;
