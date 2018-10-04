@@ -21,12 +21,10 @@ body, html {
   animation: fadein 1s ease-in 1 forwards;
 }
 
-@keyframes fadein {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+section {
+  position: relative;
+  height: 100vh;
 }
-
-section { position: relative; }
 
 .section-inner {
   position: absolute;
@@ -36,15 +34,27 @@ section { position: relative; }
   width: 100vw;
 }
 
-.main-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 100vh 100vh 100vh 100vh;
-  grid-template-rows: 100vh 100vh 100vh 100vh;
+.ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 40vh;
+  background-image: url('../lulutripoppy/img/ribbon.png');
+  pointer-events: none;
+  animation: fadein 1s ease-in 10s 1 forwards;
 }
 
 .float-white-container {
   background: $color-white;
+  position: relative;
+  z-index: 4;
   max-width: 650px;
   margin: 0 auto;
   padding: 40px;
@@ -70,41 +80,61 @@ section { position: relative; }
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url('../img/lulutripoppy/bg01.jpg');
+  background-image: url('../lulutripoppy/img/bg01.jpg');
+  height: 110vh;
+  z-index: 1;
 
   #logo {
-    background-image: url('../img/lulutripoppy/logo-sprite.png');
+    background-image: url('../lulutripoppy/img/logo-sprite.png');
     background-size: 600px;
     width: 600px;
     height: 175px;
-    animation: logo 1s steps(10) 2s 1 forwards;
+    animation: logo 1s steps(10) 1.5s 1 forwards;
     position: absolute;
     margin-top: -10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
     span { display: none; }
-  }
-
-  @keyframes logo {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 -1750px; }
   }
 }
 
 #summary {
-  background: $color-tris;
+  background: $color-sky;
+  height: 80vh;
+  z-index: 2;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -2.5vw;
-    height: 5vw;
-    left: -2.5vw;
-    right: -2.5vw;
-    background: radial-gradient(circle, $color-tris 70%, transparent 72% );
-    background-size: 5vw;
+  svg {
+    width: 100%;
+  	.circles{ fill: $color-sky; }
+
+  	.line {
+      fill: none;
+      stroke: $color-sky;
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+    }
+
+  	.dash {
+      fill: none;
+      stroke: $color-white;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-miterlimit: 8;
+      stroke-dasharray: 3,6;
+    }
+
+    &.top {
+      position: absolute;
+      top: -4vw;
+    }
+
+    &.bottom {
+      position: absolute;
+      bottom: -4vw;
+      transform: rotate(180deg);
+    }
   }
 
   .inner {
@@ -115,10 +145,10 @@ section { position: relative; }
   }
 
   .cover {
-    box-shadow: 0 0 5px rgba($color-purple, 0.3);
-    width: 150px;
-    transform: rotate(-2deg);
-    margin: 20px 40px 20px 30px;
+    box-shadow: 0 0 5px rgba($color-purple, 0.2);
+    width: 200px;
+    transform: rotate(-1deg);
+    margin: 10px 40px 10px 30px;
   }
 
   dl {
@@ -145,19 +175,13 @@ section { position: relative; }
 }
 
 #member {
-  background: $color-sky;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -2.5vw;
-    height: 5vw;
-    left: -2.5vw;
-    right: -2.5vw;
-    background: radial-gradient(circle, $color-sky 70%, transparent 72% );
-    background-size: 5vw;
-  }
+  z-index: 1;
+  height: 110vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../lulutripoppy/img/bg01.jpg');
+  height: 110vh;
 
   .members {
     display: -ms-grid;
@@ -217,42 +241,85 @@ section { position: relative; }
 }
 
 @media screen and (max-width : 480px){
-  body { overflow: auto; }
-
-  .scroll-down, .scroll-up,
-  p br, .back, .large-title-subtitle {
-    display: none;
-  }
+  .ribbon { background-size: 30vh; }
+  overflow-x: hidden;
 
   #top {
     background-attachment: scroll;
+    background-position: 13% center;
+    #logo { transform: translate(-50%, -50%) scale(0.6); }
   }
 
-  .main-grid {
-    display: block;
+  .float-white-container {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba($color-purple, 0.3);
 
-    > * {
-      overflow: auto;
-      min-height: 100vh;
+    .image-title img {
+      margin: -110px 0 0 -95px;
+      transform: scale(0.4);
     }
   }
 
-  .section-title {
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding: 0 20px;
-    &:before { display: none; }
+  #summary {
+    height: auto;
+    .cover { display: none; }
+
+    .section-inner {
+      position: static;
+      transform: none;
+      padding: 80px 15px;
+    }
   }
 
-  .section-contents {
-    padding: 0 20px;
-  }
+  #member {
+    height: auto;
+    background-attachment: scroll;
 
-  .large-title {
-    font-size: 26px;
-    letter-spacing: 3px;
-    margin: 20px 0 20px;
-  }
+    .section-inner {
+      position: static;
+      transform: none;
+      padding: 100px 15px;
+    }
 
-  hr { margin: 20px 0; }
+    .members {
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns:  1fr 1fr;
+
+      li { margin-bottom: 10px;}
+
+      .icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+      }
+
+      p {
+        margin: 5px 0 5px;;
+        font-size: 12px;
+        &.blue { color: $color-poppy; }
+        &.pink { color: $color-lulu; }
+      }
+
+      h3 {
+        font-size: 14px;
+        margin: 0;
+        font-weight: normal;
+        font-family: "vdl-megamaru", sans-serif;
+      }
+    }
+  }
+}
+
+
+
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes logo {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -1750px; }
 }
