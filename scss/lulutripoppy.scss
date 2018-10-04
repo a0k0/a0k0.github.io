@@ -34,21 +34,20 @@ section {
   width: 100vw;
 }
 
-.ribbon {
+.star {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 3;
-  width: 100vw;
-  height: 100vh;
   background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 40vh;
-  background-image: url('../lulutripoppy/img/ribbon.png');
+  background-position: center;
+  background-size: cover;
+  background-image: url('../lulutripoppy/img/star.png');
   pointer-events: none;
-  animation: fadein 1s ease-in 10s 1 forwards;
+  opacity: 0;
+  animation: fadein 1s ease-in 2s 1 forwards;
 }
 
 .float-white-container {
@@ -91,12 +90,22 @@ section {
     height: 175px;
     animation: logo 1s steps(10) 1.5s 1 forwards;
     position: absolute;
-    margin-top: -10px;
+    margin-top: -30px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     span { display: none; }
+  }
+
+  .copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    margin-top: 80px;
+    opacity: 0;
+    animation: fadein 1s ease-in 2s 1 forwards;
   }
 }
 
@@ -241,12 +250,17 @@ section {
 }
 
 @media screen and (max-width : 480px){
-  .ribbon { background-size: 30vh; }
-  overflow-x: hidden;
+  body,html { overflow-x: hidden; }
+
+  .star {
+    background-position: 50% top;
+    background-size: 200%;
+  }
 
   #top {
     background-attachment: scroll;
     background-position: 13% center;
+
     #logo { transform: translate(-50%, -50%) scale(0.6); }
   }
 
@@ -268,7 +282,7 @@ section {
     .section-inner {
       position: static;
       transform: none;
-      padding: 80px 15px;
+      padding: 60px 15px 50px;
     }
   }
 
