@@ -921,17 +921,20 @@ section {
 #summary .inner {
   display: -webkit-flex;
   display: flex;
+  flex-direction: row;
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 171, ../scss/lulutripoppy.scss */
+/* line 172, ../scss/lulutripoppy.scss */
 #summary .cover {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
   box-shadow: 0 0 5px rgba(74, 82, 140, 0.2);
   width: 200px;
   transform: rotate(-1deg);
   margin: 10px 40px 10px 30px;
 }
-/* line 178, ../scss/lulutripoppy.scss */
+/* line 181, ../scss/lulutripoppy.scss */
 #summary dl {
   display: -webkit-flex;
   display: flex;
@@ -940,13 +943,13 @@ section {
   margin: 0;
   line-height: 20px;
 }
-/* line 186, ../scss/lulutripoppy.scss */
+/* line 189, ../scss/lulutripoppy.scss */
 #summary dl dt {
   width: 20%;
   color: #ea6da4;
   font-size: 12px;
 }
-/* line 192, ../scss/lulutripoppy.scss */
+/* line 195, ../scss/lulutripoppy.scss */
 #summary dl dd {
   font-size: 14px;
   margin: 0 0 10px;
@@ -954,7 +957,7 @@ section {
   font-family: "vdl-megamaru", sans-serif;
 }
 
-/* line 201, ../scss/lulutripoppy.scss */
+/* line 204, ../scss/lulutripoppy.scss */
 #member {
   z-index: 1;
   height: 110vh;
@@ -964,27 +967,36 @@ section {
   background-image: url("../lulutripoppy/img/bg01.jpg");
   height: 110vh;
 }
-/* line 210, ../scss/lulutripoppy.scss */
+/* line 213, ../scss/lulutripoppy.scss */
 #member .ribbon {
   width: 120px;
   position: absolute;
   top: -130px;
   left: -35px;
 }
-/* line 217, ../scss/lulutripoppy.scss */
+/* line 220, ../scss/lulutripoppy.scss */
 #member .members {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto auto auto;
+  grid-template-rows: auto auto auto;
   margin: 15px 10px;
+  /* ゴミ対応 */
 }
-/* line 224, ../scss/lulutripoppy.scss */
+/* line 229, ../scss/lulutripoppy.scss */
 #member .members li {
   position: relative;
   margin-bottom: 10px;
 }
-/* line 229, ../scss/lulutripoppy.scss */
+/* line 233, ../scss/lulutripoppy.scss */
+#member .members li:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* line 240, ../scss/lulutripoppy.scss */
 #member .members .twicon {
   transition: 0.2s;
   opacity: 0;
@@ -994,7 +1006,7 @@ section {
   width: 30px;
   z-index: 1;
 }
-/* line 239, ../scss/lulutripoppy.scss */
+/* line 250, ../scss/lulutripoppy.scss */
 #member .members .icon {
   float: left;
   width: 60px;
@@ -1005,40 +1017,85 @@ section {
   margin-right: 15px;
   transition: 0.2s;
 }
-/* line 248, ../scss/lulutripoppy.scss */
+/* line 259, ../scss/lulutripoppy.scss */
 #member .members .icon img {
   width: 100%;
 }
-/* line 251, ../scss/lulutripoppy.scss */
+/* line 262, ../scss/lulutripoppy.scss */
 #member .members p {
   margin: 10px 0 5px;
   font-size: 13px;
 }
-/* line 254, ../scss/lulutripoppy.scss */
+/* line 265, ../scss/lulutripoppy.scss */
 #member .members p.blue {
   color: #00bdf1;
 }
-/* line 255, ../scss/lulutripoppy.scss */
+/* line 266, ../scss/lulutripoppy.scss */
 #member .members p.pink {
   color: #ea6da4;
 }
-/* line 258, ../scss/lulutripoppy.scss */
+/* line 269, ../scss/lulutripoppy.scss */
 #member .members h3 {
   font-size: 15px;
   margin: 0;
   font-weight: normal;
   font-family: "vdl-megamaru", sans-serif;
 }
-/* line 266, ../scss/lulutripoppy.scss */
+/* line 277, ../scss/lulutripoppy.scss */
 #member .members a:hover .twicon {
   opacity: 1;
 }
-/* line 267, ../scss/lulutripoppy.scss */
+/* line 278, ../scss/lulutripoppy.scss */
 #member .members a:hover .icon {
   opacity: 0.8;
 }
+/* line 282, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+}
+/* line 283, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
+}
+/* line 284, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(3) {
+  -ms-grid-column: 3;
+  -ms-grid-row: 1;
+}
+/* line 285, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(4) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
+}
+/* line 286, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(5) {
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+}
+/* line 287, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(6) {
+  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+}
+/* line 288, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(7) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+}
+/* line 289, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(8) {
+  -ms-grid-column: 2;
+  -ms-grid-row: 3;
+}
+/* line 290, ../scss/lulutripoppy.scss */
+#member .members li:nth-child(9) {
+  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+}
 
-/* line 272, ../scss/lulutripoppy.scss */
+/* line 294, ../scss/lulutripoppy.scss */
 #wait {
   background: #ea6da4;
   font-size: 18px;
@@ -1046,11 +1103,11 @@ section {
   color: #fff;
   font-family: "vdl-megamaru", sans-serif;
 }
-/* line 278, ../scss/lulutripoppy.scss */
+/* line 300, ../scss/lulutripoppy.scss */
 #wait h2 {
   text-align: center;
 }
-/* line 280, ../scss/lulutripoppy.scss */
+/* line 302, ../scss/lulutripoppy.scss */
 #wait::before {
   content: "";
   display: block;
@@ -1064,112 +1121,112 @@ section {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 294, ../scss/lulutripoppy.scss */
+  /* line 316, ../scss/lulutripoppy.scss */
   body, html {
     overflow-x: hidden;
   }
 
-  /* line 296, ../scss/lulutripoppy.scss */
+  /* line 318, ../scss/lulutripoppy.scss */
   .star {
     background-position: 50% top;
     background-size: 200%;
   }
 
-  /* line 301, ../scss/lulutripoppy.scss */
+  /* line 323, ../scss/lulutripoppy.scss */
   #top {
     background-attachment: scroll;
     background-position: 13% center;
   }
-  /* line 305, ../scss/lulutripoppy.scss */
+  /* line 327, ../scss/lulutripoppy.scss */
   #top #logo {
     transform: translate(-50%, -50%) scale(0.6);
   }
-  /* line 306, ../scss/lulutripoppy.scss */
+  /* line 328, ../scss/lulutripoppy.scss */
   #top .copy {
     transform: translate(-50%, -50%) scale(0.7);
   }
 
-  /* line 309, ../scss/lulutripoppy.scss */
+  /* line 331, ../scss/lulutripoppy.scss */
   .float-white-container {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(74, 82, 140, 0.3);
   }
-  /* line 314, ../scss/lulutripoppy.scss */
+  /* line 336, ../scss/lulutripoppy.scss */
   .float-white-container .image-title img {
     margin: -110px 0 0 -95px;
     transform: scale(0.4);
   }
 
-  /* line 320, ../scss/lulutripoppy.scss */
+  /* line 342, ../scss/lulutripoppy.scss */
   #summary {
     height: auto;
   }
-  /* line 322, ../scss/lulutripoppy.scss */
+  /* line 344, ../scss/lulutripoppy.scss */
   #summary .cover {
     display: none;
   }
-  /* line 323, ../scss/lulutripoppy.scss */
+  /* line 345, ../scss/lulutripoppy.scss */
   #summary svg {
     width: 200%;
   }
-  /* line 325, ../scss/lulutripoppy.scss */
+  /* line 347, ../scss/lulutripoppy.scss */
   #summary .section-inner {
     position: static;
     transform: none;
     padding: 70px 15px 60px;
   }
-  /* line 331, ../scss/lulutripoppy.scss */
+  /* line 353, ../scss/lulutripoppy.scss */
   #summary .candy {
     right: -10px;
     bottom: -30px;
     left: auto;
   }
 
-  /* line 338, ../scss/lulutripoppy.scss */
+  /* line 360, ../scss/lulutripoppy.scss */
   #member {
     height: auto;
     background-attachment: scroll;
   }
-  /* line 342, ../scss/lulutripoppy.scss */
+  /* line 364, ../scss/lulutripoppy.scss */
   #member .section-inner {
     position: static;
     transform: none;
     padding: 100px 15px;
   }
-  /* line 348, ../scss/lulutripoppy.scss */
+  /* line 370, ../scss/lulutripoppy.scss */
   #member .members {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-  /* line 351, ../scss/lulutripoppy.scss */
+  /* line 373, ../scss/lulutripoppy.scss */
   #member .members li {
     margin-bottom: 10px;
   }
-  /* line 353, ../scss/lulutripoppy.scss */
+  /* line 375, ../scss/lulutripoppy.scss */
   #member .members .icon {
     width: 45px;
     height: 45px;
     margin-right: 10px;
   }
-  /* line 359, ../scss/lulutripoppy.scss */
+  /* line 381, ../scss/lulutripoppy.scss */
   #member .members p {
     margin: 5px 0 5px;
     font-size: 11px;
   }
-  /* line 364, ../scss/lulutripoppy.scss */
+  /* line 386, ../scss/lulutripoppy.scss */
   #member .members h3 {
     font-size: 14px;
   }
 }
-/* line 373, ../scss/lulutripoppy.scss */
+/* line 395, ../scss/lulutripoppy.scss */
 .jq-fadein {
   opacity: 0;
   transform: translate(0, 40px);
   transition: all 0.5s;
 }
 
-/* line 379, ../scss/lulutripoppy.scss */
+/* line 401, ../scss/lulutripoppy.scss */
 .jq-fadein.scrollin {
   opacity: 1;
   transform: translate(0, 0);
