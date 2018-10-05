@@ -303,6 +303,7 @@ section {
     background-position: 13% center;
 
     #logo { transform: translate(-50%, -50%) scale(0.6); }
+    .copy { transform: translate(-50%, -50%) scale(0.7); }
   }
 
   .float-white-container {
@@ -319,11 +320,12 @@ section {
   #summary {
     height: auto;
     .cover { display: none; }
+    svg { width: 200%; }
 
     .section-inner {
       position: static;
       transform: none;
-      padding: 60px 15px 50px;
+      padding: 70px 15px 60px;
     }
 
     .candy {
@@ -356,7 +358,7 @@ section {
 
       p {
         margin: 5px 0 5px;
-        font-size: 12px;
+        font-size: 11px;
       }
 
       h3 {
