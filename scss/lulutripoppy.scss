@@ -115,6 +115,7 @@ section {
   z-index: 2;
 
   svg {
+    position: absolute;
     width: 100%;
   	.circles{ fill: $color-sky; }
 
@@ -135,12 +136,10 @@ section {
     }
 
     &.top {
-      position: absolute;
       top: -4vw;
     }
 
     &.bottom {
-      position: absolute;
       bottom: -4vw;
       transform: rotate(180deg);
     }
