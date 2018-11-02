@@ -33,19 +33,6 @@
 </head>
 <body>
 
-<header id="global-navigation">
-  <div class="menu-bar"></div>
-  <nav>
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
-</header>
-
 <main class="main-grid">
   <section id="top" class="grid-col1 white" style="background-image: url('img/illustration/underthesea.jpg');">
     <h1 class="main-title">POCO</h1>
@@ -106,6 +93,11 @@
       <h1 class="section-title">Project</h1>
       <div id="slider2" class="slider">
         <ul>
+          <li id="project05-thumb">
+            <button onclick="openModal($('#project05'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
           <li id="project04-thumb">
             <button onclick="openModal($('#project04'))">
               <h1 class="slider-title"></h1>
@@ -127,8 +119,8 @@
             </button>
           </li>
         </ul>
-        <!-- <button class="slider-nav-prev" onclick="slide($('#slider2'), 'prev')"></button>
-        <button class="slider-nav-next" onclick="slide($('#slider2'), 'next')"></button> -->
+        <button class="slider-nav-prev" onclick="slide($('#slider2'), 'prev')"></button>
+        <button class="slider-nav-next" onclick="slide($('#slider2'), 'next')"></button>
       </div>
     </div>
     <a href="#about" class="scroll-down">scroll</a>
@@ -181,7 +173,7 @@
         以下の範囲に収まらないご依頼は別途 <button onclick="openForm($('#contact'))">CONTACT</button> よりご連絡ください。
       </p>
       <p class="des--m">
-        ※ 現在、納期は2週間〜1ヶ月程いただいております<br/>
+        ※ 現在冬コミ対応中のため、制作が2019年1月以降になる場合があります。<br/>
         ※ 著作権等の放棄はしておりません。ご依頼いただいた用途以外でのご使用はご遠慮ください。
       </p>
     </div>
@@ -414,6 +406,21 @@
         </article>
       </section>
       <section class="projects">
+        <article id="project05" class="modal-inner">
+          <img src="img/project/lulutripoppy-t.png" alt="るるとりぽっぴ★" class="thumbnail" />
+          <img src="img/project/lulutripoppy-m.png" alt="るるとりぽっぴ★" class="main" />
+          <div class="text">
+            <h1>るるとりぽっぴ★</h1>
+            <p class="category">
+              2018/12/30 / Anthology / Edit & Design
+            </p>
+            <p class="summary">
+              Cover illustration: <a href="https://twitter.com/u_s0" target="_blank">宇崎うそ</a><br/>
+              リーグ・オブ・レジェンドのルル・トリスターナ・ポッピーを中心とした<br/>
+              非公式アンソロジー「<a href="lulutripoppy/" target="_blank">るるとりぽっぴ★</a>」の主催・編集・デザイン・WEBデザインを担当しました。
+            </p>
+          </div>
+        </article>
 
         <article id="project04" class="modal-inner">
           <img src="img/project/poco-t.png" alt="poco aoko" class="thumbnail" />
