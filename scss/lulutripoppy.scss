@@ -1,8 +1,6 @@
 @import "config/reset";
 @import "config/setting";
-@import "module/slider";
-@import "module/form";
-@import "module/modal";
+@import "module/flickity";
 
 $color-sky: #b0eeff;
 $color-poppy: #00bdf1;
@@ -11,7 +9,11 @@ $color-tris: #ffee66;
 $color-purple: #4a528c;
 
 body, html {
-  background: $color-white;
+  background-color: $color-lulu;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../lulutripoppy/img/bg01.jpg');
   font-family: "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -76,10 +78,6 @@ section {
 
 
 #top {
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: url('../lulutripoppy/img/bg01.jpg');
   height: 110vh;
   z-index: 1;
 
@@ -203,11 +201,6 @@ section {
 #member {
   z-index: 1;
   height: 110vh;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: url('../lulutripoppy/img/bg01.jpg');
-  height: 110vh;
 
   .ribbon {
     width: 120px;
@@ -290,29 +283,91 @@ section {
   }
 }
 
-#wait {
-  background: $color-lulu;
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: $color-white;
-  font-family: "vdl-megamaru", sans-serif;
-  h2 { text-align: center;}
+#sample {
+  z-index: 1;
+  height: 100vh;
+  background-color: $color-lulu;
+  .samples img { display: block; }
 
-  &::before {
-    content: "";
-    display: block;
+  .float-white-container {
+    padding: 30px 40px 45px;
+    .image-title img { margin-top: -120px; }
+  }
+
+  svg {
     position: absolute;
-    top: -2.5vw;
-    height: 5vw;
-    left: -2.5vw;
-    right: -2.5vw;
-    background: radial-gradient(circle, $color-lulu 70%, transparent 72% );
-    background-size: 5vw;
+    width: 100%;
+  	.circles{ fill: $color-lulu; }
+
+  	.line {
+      fill: none;
+      stroke: $color-lulu;
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+    }
+
+  	.dash {
+      fill: none;
+      stroke: $color-white;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-miterlimit: 8;
+      stroke-dasharray: 3,6;
+    }
+
+    &.top {
+      top: -4vw;
+    }
+
+    &.bottom {
+      bottom: -4vw;
+      transform: rotate(180deg);
+    }
+  }
+
+  .ribbon {
+    width: 120px;
+    position: absolute;
+    bottom: -15px;
+    left: -50px;
+  }
+
+  .candy {
+    width: 157px;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    z-index: 4;
   }
 }
 
+
+.js-flickity {
+  .flickity-viewport {
+    border-radius: 5px;
+    border: 5px solid $color-lulu;
+  }
+
+  .flickity-page-dots {
+    .dot {
+      margin: 0 2px;
+      border: 1px solid $color-poppy;
+      background: $color-white;
+      opacity: 1;
+      &.is-selected { background: $color-poppy; }
+    }
+  }
+}
+
+
+
 @media screen and (max-width : 480px){
   body,html { overflow-x: hidden; }
+
+  body {
+    //background-attachment: scroll;
+    background-position: 13% center;
+  }
 
   .star {
     background-position: 50% top;
@@ -320,9 +375,6 @@ section {
   }
 
   #top {
-    background-attachment: scroll;
-    background-position: 13% center;
-
     #logo { transform: translate(-50%, -50%) scale(0.6); }
     .copy { transform: translate(-50%, -50%) scale(0.7); }
   }
@@ -348,17 +400,10 @@ section {
       transform: none;
       padding: 70px 15px 60px;
     }
-
-    .candy {
-      right: -10px;
-      bottom: -30px;
-      left: auto;
-    }
   }
 
   #member {
     height: auto;
-    background-attachment: scroll;
 
     .section-inner {
       position: static;
@@ -387,8 +432,24 @@ section {
       }
     }
   }
-}
 
+  #sample {
+    height: auto;
+    .float-white-container { padding: 20px 30px 40px; }
+
+    .section-inner {
+      position: static;
+      transform: none;
+      padding: 100px 15px;
+    }
+
+    .candy {
+      right: -10px;
+      bottom: -30px;
+      left: auto;
+    }
+  }
+}
 
 
 .jq-fadein {
