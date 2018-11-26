@@ -10,10 +10,6 @@ $color-purple: #4a528c;
 
 body, html {
   background-color: $color-lulu;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: url('../lulutripoppy/img/bg01.jpg');
   font-family: "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -21,6 +17,16 @@ body, html {
   color: $color-purple;
   position: relative;
   animation: fadein 1s ease-in 1 forwards;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 0;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../lulutripoppy/img/bg01.jpg');
 }
 
 section {
@@ -364,9 +370,9 @@ section {
 @media screen and (max-width : 480px){
   body,html { overflow-x: hidden; }
 
-  body {
-    //background-attachment: scroll;
+  #background {
     background-position: 13% center;
+    background-size: cover;
   }
 
   .star {
@@ -399,6 +405,12 @@ section {
       position: static;
       transform: none;
       padding: 70px 15px 60px;
+    }
+
+    .candy {
+      right: -10px;
+      bottom: -30px;
+      left: auto;
     }
   }
 
@@ -441,12 +453,6 @@ section {
       position: static;
       transform: none;
       padding: 100px 15px;
-    }
-
-    .candy {
-      right: -10px;
-      bottom: -30px;
-      left: auto;
     }
   }
 }
