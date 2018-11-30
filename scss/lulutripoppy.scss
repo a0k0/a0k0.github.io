@@ -115,7 +115,7 @@ section {
 
 #summary {
   background: $color-sky;
-  height: 80vh;
+  height: auto;
   z-index: 2;
 
   svg {
@@ -149,6 +149,12 @@ section {
     }
   }
 
+  .section-inner {
+    position: static;
+    transform: none;
+    padding: 70px 15px 60px;
+  }
+
   .ribbon {
     width: 120px;
     position: absolute;
@@ -167,6 +173,7 @@ section {
   .inner {
     display: -webkit-flex;
     display: flex;
+    flex-wrap: nowrap;
 	  flex-direction:row;
     -webkit-align-items: center;
     align-items: center;
@@ -201,6 +208,12 @@ section {
       width: 80%;
       font-family: "vdl-megamaru", sans-serif;
     }
+  }
+
+  .goods {
+    display: block;
+    margin: 10px auto 0;
+    width: 95%;
   }
 }
 
