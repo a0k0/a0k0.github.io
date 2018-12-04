@@ -63,10 +63,6 @@ hr {
   }
 }
 
-#global-navigation {
-  position: fixed;
-}
-
 .section-inner {
   position: absolute;
   top: 50%;
@@ -133,10 +129,22 @@ hr {
   grid-column: 2;
 }
 
+
+.language {
+  position: fixed;
+  top: 20px;
+  right:  20px;
+  color: $color-gray;
+  font-size: 13px;
+  z-index: 1;
+  a:hover { text-decoration: underline; }
+}
+
 #top {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  z-index: 2;
 
   .main-title {
     font-weight: 600;
