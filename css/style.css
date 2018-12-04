@@ -258,6 +258,19 @@ a {
     letter-spacing: 0.03em;
   }
 }
+/* line 38, ../scss/config/_setting.scss */
+.en .des--l {
+  font-family: "Helvetica Neue", HelveticaNeue, "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+}
+/* line 44, ../scss/config/_setting.scss */
+.en .des--m {
+  font-family: "Helvetica Neue", HelveticaNeue, "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
 /* line 1, ../scss/module/_slider.scss */
 .slider {
   position: relative;

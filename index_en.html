@@ -5,15 +5,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="content-language" content="ja" />
+  <meta http-equiv="content-language" content="en" />
 
-  <meta name="description" content="イラスト／WEBデザイン／その他デザイン　各種ご依頼・お問い合わせはこちらから。" />
+  <meta name="description" content="Illustration / Web design / Editorial design / Commission / Contact" />
   <meta property="og:title" content="poco - Aoko's works" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://a0k0.me" />
   <meta property="og:image" content="https://a0k0.me/img/illustration/underthesea.jpg" />
   <meta property="og:site_name" content="poco" />
-  <meta property="og:description" content="イラスト／WEBデザイン／その他デザイン　各種ご依頼・お問い合わせはこちらから。" />
+  <meta property="og:description" content="Illustration / Web design / Editorial design / Commission / Contact" />
   <meta property="fb:app_id" content="227318177890145" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@a0k0" />
@@ -32,7 +32,7 @@
     gtag('config', 'UA-122073463-1');
   </script>
 </head>
-<body>
+<body class="en">
 
 <main class="main-grid">
   <section id="top" class="grid-col1 white" style="background-image: url('img/illustration/underthesea.jpg');">
@@ -132,29 +132,27 @@
       <h1 class="section-title">About me</h1>
       <div class="section-contents">
         <h2 class="large-title">
-          あおこ
-          <span class="large-title-subtitle">イラスト / デザイン</span>
+          AOKO
+          <span class="large-title-subtitle">Illustration / Design</span>
         </h2>
         <p class="des--l">
-          1992年2月2日 静岡生まれ。<br/>
-          桑沢デザイン研究所を卒業後、都内でWEBデザイナーとして勤務。<br/>
-          本業の傍ら、イラストレーター兼デザイナーとして活動中。
+          Born February 2, 1992.<br/>
+          After graduating from the Kuwasawa Design Institute, I work as a designer and illustrator in Tokyo.
         </p>
         <p class="des--l">
-          SNS等個人利用でのイラストのご依頼、<br/>
-          その他デザイン、法人からのご依頼等を承っております。<br/>
-          以下のボタンよりお気軽にご相談ください。
+          Open commission.
+          Please contact me via the button below.
         </p>
 
-        <button class="btn_b-gray" onclick="openForm($('#commission'))">ご依頼はこちら</button>
-        <button class="btn_b-gray" onclick="openForm($('#contact'))">お問い合わせ</button>
+        <button class="btn_b-gray" onclick="openForm($('#commission'))">COMMISSION</button>
+        <button class="btn_b-gray" onclick="openForm($('#contact'))">CONTACT</button>
 
 
 
         <ul class="footer-nav">
           <li><a href="https://twitter.com/a0k0" target="_blank">Twitter</a></li>
-          <li><a href="https://a0k0.booth.pm/" target="_blank">通販</a></li>
-          <li><a href="https://www.pixiv.net/fanbox/creator/274516" target="_blank">PixivFANBOX</a></li>
+          <li><a href="https://a0k0.booth.pm/" target="_blank">Web shop</a></li>
+          <li><a href="https://www.pixiv.net/fanbox/creator/274516" target="_blank">pixivFANBOX</a></li>
         </ul>
       </div>
     </div>
@@ -167,73 +165,70 @@
       <button class="back" onclick="closeForm()"></button>
       <h1 class="large-title blue">
         COMMISSION
-        <span class="large-title-subtitle">個人の方からのご依頼</span>
       </h1>
       <p class="des--l">
-        1週間以内にご返信をさせていただきます。<br/>
-        以下の範囲に収まらないご依頼は別途 <button onclick="openForm($('#contact'))">CONTACT</button> よりご連絡ください。
+        I will reply within a week.<br/>
+        If it does not fit below, <button onclick="openForm($('#contact'))">please contact me here</button>.
       </p>
       <p class="des--m">
-        ※ 現在冬コミ対応中のため、制作が2019年1月以降になる場合があります。<br/>
-        ※ 著作権等の放棄はしておりません。ご依頼いただいた用途以外でのご使用はご遠慮ください。
+        * Delivery will be after January 2019.<br/>
+        * I don't abandon copyright. Please refrain from using it for applications other than those requested.
       </p>
     </div>
 
     <hr />
 
     <form class="section-contents grid-form">
-      <label>お名前</label>
-      <input id="commission-name" class="form" type="text" placeholder="あおこ" required />
+      <label>Your name</label>
+      <input id="commission-name" class="form" type="text" placeholder="Aoko" required />
 
-      <label>メールアドレス</label>
+      <label>Your email</label>
       <input id="commission-mail" class="form" type="email" placeholder="aoko@example.com" required />
 
-      <label>ご依頼内容</label>
+      <label>Commission type</span></label>
       <select id="commission-type" class="form" required>
-        <option selected="selected" disabled>選択してください</option>
-        <optgroup label="SNS用 (twitter/Facebook/LINEなど)">
-          <option value="SNS用アイコン">SNS用アイコン（500px）　¥3,000</option>
-          <option value="SNS用ヘッダー">SNS用ヘッダー（500px*1500px）　¥5,000</option>
+        <option selected="selected" disabled>Select type</option>
+        <optgroup label="For SNS (twitter/Facebook/LINE/etc.)">
+          <option value="SNS用アイコン">Avatar icon（500px）　¥3,000</option>
+          <option value="SNS用ヘッダー">Header image（500px*1500px）　¥5,000</option>
         </optgroup>
-        <optgroup label="配信用 (twitchなど)">
-          <option value="配信用バナー">配信用バナー（640px*240px）　¥4,000</option>
-          <option value="配信用スタンプ">配信用スタンプ（~150px）　¥500</option>
+        <optgroup label="For Stream (twitch/etc.)">
+          <option value="配信用バナー">Twitch banner（640px*240px）　¥4,000</option>
+          <option value="配信用スタンプ">Twitch stamp（~150px）　¥500</option>
         </optgroup>
-        <optgroup label="その他">
-          <option value="小サイズ">小（~300px）　¥2,000</option>
-          <option value="中サイズ">中（300px~1000px）　¥4,000</option>
-          <option value="大サイズ">大（1000px~2000px）　¥8,000</option>
-          <option value="印刷用">印刷用（2000px~）　¥10,000</option>
-          <option value="色紙">色紙（10cm）　¥3,000</option>
+        <optgroup label="Others (wallpaper/etc.)">
+          <option value="小サイズ">Small size（~300px）　¥2,000</option>
+          <option value="中サイズ">Medium size（300px~1000px）　¥4,000</option>
+          <option value="大サイズ">Large size（1000px~2000px）　¥8,000</option>
+          <option value="印刷用">For print（2000px~）　¥10,000</option>
+          <option value="色紙">Illustboard（10cm）　¥3,000</option>
         </optgroup>
       </select>
 
-      <label>オプション</label>
+      <label>Option</label>
       <div id="commission-option" class="form checkbox">
         <input value="背景あり" id="background" type="checkbox" />
-        <label for="background">背景描き込み <span class="red">(+20%)</span></label>
+        <label for="background">With background <span class="red">(+20%)</span></label>
         <input value="キャラクター2名以上" id="multiple" type="checkbox" name="entry.1323144998" />
-        <label for="multiple">キャラクター2人以上 <span class="red">(+20%/1character)</span></label>
+        <label for="multiple">Multiple character <span class="red">(+20%/1character)</span></label>
         <input value="オリジナルキャラクターの作成" id="original" type="checkbox" name="entry.1323144998" />
-        <label for="original">オリジナルキャラクターの作成 <span class="red">(+¥5,000)</span></label>
+        <label for="original">Character design <span class="red">(+¥5,000)</span></label>
         <input value="文字入れ" id="lettering" type="checkbox" name="entry.132314499" />
-        <label for="lettering">お名前・ID等の文字入れ <span class="blue">(無料)</span></label>
-        <input value="公開を許可" id="publication" type="checkbox" name="entry.1323144998" />
-        <label for="publication">作者のTwitterや作品集での公開を許可 <span class="blue">(-5%)</span></label>
+        <label for="lettering">Lettering <span class="blue">(FREE)</span></label>
       </div>
 
-      <label>お支払い方法</label>
+      <label>Payment method</label>
       <select id="commission-payment" class="form" required>
-        <option selected="selected" disabled>選択してください</option>
-        <option value="Amazonギフト券">Amazonギフト券</option>
-        <option value="銀行振込">銀行振込 (¥10,000~)</option>
+        <option selected="selected" disabled>Select type</option>
         <option value="Paypal">Paypal</option>
+        <option value="Amazonギフト券">Amazon(JP) gift card</option>
+        <option value="銀行振込">Bank transfer (¥10,000~)</option>
       </select>
 
-      <label>ご依頼の詳細</label>
-      <textarea id="commission-message" class="form" rows="8" placeholder="ご希望されるキャラクター/絵柄/構図など、できるだけ詳細にご記入ください。" required></textarea>
+      <label>Description</label>
+      <textarea id="commission-message" class="form" rows="8" placeholder="Please enter the desired character / design / composition / etc.." required></textarea>
 
-      <button class="btn_f-blue" type="button" onclick="postCommissionToGoogle()">送信する</button>
+      <button class="btn_f-blue" type="button" onclick="postCommissionToGoogle()">SEND COMMISSION</button>
     </form>
   </aside>
 
@@ -243,37 +238,34 @@
       <button class="back" onclick="closeForm()"></button>
       <h1 class="large-title red">
         CONTACT
-        <span class="large-title-subtitle">その他のお問い合わせ</span>
       </h1>
       <p class="des--l">
-        1週間以内にご返信をさせていただきます。<br/>
-        SNSアイコンのご依頼等、個人的なご依頼は <button onclick="openForm($('#commission'))">こちら</button> よりご依頼ください。
+        I will reply within a week.<br/>
+        If you want to make a personal order like SNS icon, <button onclick="openForm($('#contact'))">send commission here</button>.
       </p>
     </div>
 
     <hr />
 
     <form class="section-contents grid-form">
-      <label>お名前</label>
-      <input id="contact-name" class="form" type="text" placeholder="あおこ" />
+      <label>Your name</label>
+      <input id="contact-name" class="form" type="text" placeholder="Name" />
 
-      <label>メールアドレス</label>
-      <input id="contact-mail" class="form" type="email" placeholder="aoko@example.com" />
+      <label>Your email</label>
+      <input id="contact-mail" class="form" type="email" placeholder="Email Address" />
 
-      <label>お問い合わせ内容</label>
+      <label>Contact type</label>
       <select id="contact-type" class="form">
-        <option selected="selected" disabled>選択してください</option>
-        <option value="イラストのご依頼">イラストのご依頼</option>
-        <option value="WEBデザインのご依頼">WEBデザインのご依頼</option>
-        <option value="WEBデザインのご依頼">装丁デザインのご依頼</option>
-        <option value="その他デザインのご依頼">その他のデザインのご依頼</option>
-        <option value="その他のお問い合わせ">その他のお問い合わせ</option>
+        <option selected="selected" disabled>Select type</option>
+        <option value="イラストのご依頼">Illustration order</option>
+        <option value="その他デザインのご依頼">Design order</option>
+        <option value="その他のお問い合わせ">Other</option>
       </select>
 
-      <label>ご依頼の詳細</label>
-      <textarea id="contact-message" class="form" rows="8" placeholder="できるだけ詳細にご記入ください。"></textarea>
+      <label>Message</label>
+      <textarea id="contact-message" class="form" rows="8" placeholder=""></textarea>
 
-      <button class="btn_f-blue" type="button" onclick="postContactToGoogle()">送信する</button>
+      <button class="btn_f-blue" type="button" onclick="postContactToGoogle()">SEND MESSAGE</button>
     </form>
   </aside>
 
@@ -283,11 +275,9 @@
         <button class="back" onclick="closeForm()"></button>
         <h1 class="large-title">THANK YOU<br/>FOR YOUR INQUIRY</h1>
         <p class="des--l">
-          お問い合わせありがとうございました。<br/>
-          1週間以内を目安に、ご入力頂きましたアドレス宛にご返信させていただきます。<br/>
-          返答が無い場合は再度送信いただくか、
-          <a href="https://twitter.com/a0k0" target="_blank" class="blue">Twitter</a>
-          のDMよりお問い合わせください。
+          I will reply to the entered mail address within a week.<br/>
+          If you do not receive a reply please resend it or send me a message to
+          <a href="https://twitter.com/a0k0" target="_blank" class="blue">my Twitter account</a>.
         </p>
       </div>
     </div>
@@ -317,10 +307,6 @@
             <p class="category">
               2018/8/8 / League of Legends / fan art
             </p>
-            <p class="summary">
-              公式イベント「プールパーティ2018」用に<br/>
-              描き下ろした作品。
-            </p>
           </div>
         </article>
 
@@ -331,10 +317,6 @@
             <h1>Star Guardian</h1>
             <p class="category">
               2018/7/13 / League of Legends / fan art
-            </p>
-            <p class="summary">
-              スターガーディアンソラカを<br/>
-              ミュシャ風に描いた作品。
             </p>
           </div>
         </article>
@@ -347,9 +329,6 @@
             <p class="category">
               2018/4/13 / League of Legends / fan art
             </p>
-            <p class="summary">
-              公式イベント「花リフ2018」用に描き下ろした作品。
-            </p>
           </div>
         </article>
 
@@ -359,9 +338,6 @@
             <h1>UNDER THE SEA!</h1>
             <p class="category">
               2017/12/29 / League of Legends / fan art
-            </p>
-            <p class="summary">
-              League of Legends 非公式カレンダーに寄稿した作品。
             </p>
           </div>
         </article>
@@ -373,10 +349,6 @@
             <p class="category">
               2017/8/13 / League of Legends / fan art
             </p>
-            <p class="summary">
-              半オリジナルデザインのスキンを集めた同人誌、<br/>
-              「ルルコレ」用に描き下ろした作品。<br/>
-            </p>
           </div>
         </article>
 
@@ -386,10 +358,6 @@
             <h1>Lulu Collection</h1>
             <p class="category">
               2017/8/13 / League of Legends / fan art
-            </p>
-            <p class="summary">
-              半オリジナルデザインのスキンを集めた同人誌、<br/>
-              「ルルコレ」用に描き下ろした作品。<br/>
             </p>
           </div>
         </article>
@@ -401,9 +369,6 @@
             <p class="category">
               2017/4/15 / League of Legends / fan art
             </p>
-            <p class="summary">
-              League of Legends の AhriとXayah を描いた作品。
-            </p>
           </div>
         </article>
       </section>
@@ -412,14 +377,12 @@
           <img src="img/project/lulutripoppy-t.png" alt="るるとりぽっぴ★" class="thumbnail" />
           <img src="img/project/lulutripoppy-m.png" alt="るるとりぽっぴ★" class="main" />
           <div class="text">
-            <h1>るるとりぽっぴ★</h1>
+            <h1>LuluTriPoppy</h1>
             <p class="category">
               2018/12/30 / Anthology / Edit & Design
             </p>
             <p class="summary">
-              Cover illustration: <a href="https://twitter.com/u_s0" target="_blank">宇崎うそ</a><br/>
-              リーグ・オブ・レジェンドのルル・トリスターナ・ポッピーを中心とした<br/>
-              非公式アンソロジー「<a href="lulutripoppy/" target="_blank">るるとりぽっぴ★</a>」の主催・編集・デザイン・WEBデザインを担当しました。
+              Cover illustration: <a href="https://twitter.com/u_s0" target="_blank">Uzaki Uso</a><br/>
             </p>
           </div>
         </article>
@@ -431,10 +394,6 @@
             <h1>poco</h1>
             <p class="category">
               2018/7/7 / Portfirio / Web design & Programing
-            </p>
-            <p class="summary">
-              ポートフォリオサイト poco（当サイト）を制作しました。<br/>
-              HTML/css/jQueryを使って開発後、GitHub Pagesで公開しています。
             </p>
           </div>
         </article>
@@ -449,10 +408,6 @@
             <p class="category">
               2018/3/20 / League of Legends / Web design (Adobe XD)
             </p>
-            <p class="summary">
-              League of Legends の 非公式統計サイト、<br/>
-              <a href="http://baronbuff.gg" target="_blank">BaronBuff.GG</a> のデザインを担当しました。
-            </p>
           </div>
         </article>
 
@@ -466,11 +421,6 @@
             <p class="category">
               2017/8/23 / Discord bot / Programing (Node.js x Heroku)
             </p>
-            <p class="summary">
-              RIOT GAMES APIを使用し、LoLの対戦相手と味方チームのレートや<br/>
-              プレイヤーの情報を表示する Discord bot
-              <a href="http://luluchan.herokuapp.com/" target="_blank">るるちゃんは見ている</a> を制作しました。
-            </p>
           </div>
         </article>
 
@@ -482,12 +432,10 @@
           <div class="text">
             <h1>十三人のアリス</h1>
             <p class="category">
-              2015/2/2 / Original Book (Anthology) / 企画・お話・イラスト
+              2015/2/2 / Original Book (Anthology)
             </p>
             <p class="summary">
-              13名のアーティストを集め、アリスの世界を描いたアンソロジー絵本。<br/>
-              BOOTH にて販売中です　→　<a href="https://a0k0.booth.pm/items/69813" target="_blank">十三人のアリス</a><br/>
-              参加作家：紅林大空・茶川描・にっけ 他
+              Web SHOP -> <a href="https://a0k0.booth.pm/items/69813" target="_blank">十三人のアリス</a>
             </p>
           </div>
         </article>
