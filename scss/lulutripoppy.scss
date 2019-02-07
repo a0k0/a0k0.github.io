@@ -83,6 +83,28 @@ section {
 }
 
 
+.btn {
+  font-family: "vdl-megamaru", sans-serif;
+  display: block;
+  outline: none !important;
+  width: 250px;
+  padding: 14px 0;
+  border-radius: 100px;
+  margin: 20px auto 0;
+  font-size: 16px;
+  text-align: center;
+  background: $color-lulu;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: $color-white;
+  transition: 0.1s;
+
+  &:hover {
+    background: $color-lulu + 20;
+  }
+}
+
+
 #top {
   height: 110vh;
   z-index: 1;
