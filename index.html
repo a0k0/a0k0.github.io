@@ -36,7 +36,7 @@
 
 <nav class="language"><a href="/">JP</a> / <a href="/en">EN</a></nav>
 <main class="main-grid">
-  <section id="top" class="grid-col1 white" style="background-image: url('img/illustration/underthesea.jpg');">
+  <section id="top" class="grid-col1 white" style="background-image: url('img/illustration/sugarrash.png');">
     <h1 class="main-title">POCO</h1>
     <p class="main-summary">Illustration / Design</p>
     <a href="#illustration" class="scroll-down white">scroll</a>
@@ -47,6 +47,16 @@
       <h1 class="section-title">Illustration</h1>
       <div id="slider1" class="slider">
         <ul>
+          <li id="illustration09-thumb">
+            <button onclick="openModal($('#illustration09'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
+          <li id="illustration08-thumb">
+            <button onclick="openModal($('#illustration08'))">
+              <h1 class="slider-title"></h1>
+            </button>
+          </li>
           <li id="illustration07-thumb">
             <button onclick="openModal($('#illustration07'))">
               <h1 class="slider-title"></h1>
@@ -310,6 +320,31 @@
       <button class="close-btn" onclick="closeModal()"></button>
 
       <section class="illustrations">
+        <article id="illustration09" class="modal-inner">
+          <img src="img/illustration/sugarrash.png" alt="Sweet! Lulu & Tristana & Poppy" class="main" />
+          <img src="img/illustration/sugarrash.png" alt="Sweet! Lulu & Tristana & Poppy" class="thumbnail" />
+          <div class="text">
+            <h1>Sweet!</h1>
+            <p class="category">
+              2018/3/5 / League of Legends / fan art
+            </p>
+            <p class="summary">
+              シュガー・ラッシュ トリスターナの応援イラストとして制作した作品。
+            </p>
+          </div>
+        </article>
+
+        <article id="illustration08" class="modal-inner">
+          <img src="img/illustration/morgana.png" alt="Morgana" class="main" />
+          <img src="img/illustration/morgana.png" alt="Morgana" class="thumbnail" />
+          <div class="text">
+            <h1>The Fallen</h1>
+            <p class="category">
+              2019/3/1 / League of Legends / fan art
+            </p>
+          </div>
+        </article>
+
         <article id="illustration07" class="modal-inner">
           <img src="img/illustration/poolparty.png" alt="Pool party Lulu & Caitlyn" class="main" />
           <img src="img/illustration/poolparty-t.png" alt="Pool party Lulu & Caitlyn" class="thumbnail" />
