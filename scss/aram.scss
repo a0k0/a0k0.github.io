@@ -1,0 +1,322 @@
+@import "config/reset";
+@import "config/setting";
+
+$color-black: #363846;
+$color-accent: #3ec9f4;
+$color-gray: #6e7f99;
+
+body, html {
+  background-color: $color-white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  animation: fadein 1s ease-in 1 forwards;
+  color: $color-black;
+  letter-spacing: 0.05em;
+  line-height: 1.3em;
+}
+
+a { color: $color-accent; }
+a:hover { text-decoration: underline; }
+
+.main-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100vh 100vh 100vh 100vh 100vh;
+  grid-template-rows: 100vh 100vh 100vh 100vh 100vh;
+  -ms-grid-colmuns: 100vw;
+  grid-template-columns: 100vw;
+
+  > * {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.fixed_image {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+#background {
+  background-image: url('../aram/img/background.png');
+  z-index: 0;
+}
+
+#soraka {
+  background-image: url('../aram/img/soraka.png');
+  z-index: 2;
+  display: none;
+}
+
+#lulu {
+  background-image: url('../aram/img/lulu.png');
+  z-index: 2;
+  display: none;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+.image-title {
+  position: absolute;
+  top: -60px;
+}
+
+.circle-list li {
+  margin-left: 20px;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 2px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 7px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid $color-accent;
+  }
+}
+
+.num-list li {
+  margin-left: 20px;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 2px;
+
+  h4 {
+    font-weight: 600;
+    margin: 15px 0 10px;
+  }
+
+  .num {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    color: $color-accent;
+  }
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: $color-gray;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  &:first-of-type { margin-top: 0; }
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+p {
+  margin: 10px 0;
+  color: $color-gray;
+  font-size: 14px;
+}
+
+#top {
+  z-index: 5;
+}
+
+#logo {
+  background-image: url('../aram/img/logo.png');
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+  animation: fadein 1s 2s 1 forwards;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  span { display: none; }
+}
+
+#summary {
+  background: rgba($color-white, 0.7);
+
+  .box {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    background: $color-white;
+    padding: 40px 50px;
+    width: 480px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 15px rgba($color-black, 0.05);
+  }
+
+  dl {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 0 30px;
+
+    dt {
+      width: 25%;
+      color: $color-gray;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    dd {
+      font-size: 14px;
+      width: 75%;
+      margin: 0;
+      &:not(:last-child) { margin-bottom: 5px; }
+    }
+  }
+}
+
+#entry {
+  background: rgba($color-white, 0.7);
+
+  .box {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    background: $color-white;
+    padding: 40px 50px;
+    width: 600px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 15px rgba($color-black, 0.05);
+  }
+}
+
+#event {
+  background: rgba($color-white, 0.7);
+  display: flex;
+  align-items: center;
+
+  .box {
+    position: relative;
+    margin: 0 auto;
+    background: $color-white;
+    padding: 40px 50px;
+    width: 650px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba($color-black, 0.05);
+  }
+
+  .nunu {
+    position: absolute;
+    bottom: -40px;
+    right: -120px;
+    height: 300px;
+  }
+}
+
+#questions {
+  background: $color-white;
+  display: flex;
+
+  .box {
+    background: $color-white;
+    position: relative;
+    margin: 100px auto 0;
+    padding: 40px 50px;
+    width: 920px;
+  }
+
+  h3 {
+    margin-top: 60px !important;
+  }
+}
+
+
+.jq-fadein {
+    opacity : 0;
+    transform : translate(0, 40px);
+    transition : all 1s;
+}
+
+.jq-fadein.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+}
+
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+@media screen and (max-width : 480px){
+  body,html { overflow-x: hidden; }
+
+  .sp-hide { display: none; }
+
+  .main-grid {
+    display: block;
+    >* { overflow: visible; }
+  }
+
+  section {
+    margin: 30px 0 20px;
+    padding: 10px;
+    background: transparent !important;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  #background {
+    background-image: url('../aram/img/background_sp.jpg');
+  }
+
+  #soraka, #lulu {
+    background-image: none;
+  }
+
+  #top {
+    height: 100vh;
+    margin: 0;
+    #logo { transform: translate(-50%, -50%) scale(0.7); }
+  }
+
+  .image-title {
+    top: -30px;
+  }
+
+  .box {
+    position: static !important;
+    width: auto !important;
+    border-radius: 10px;
+    padding: 60px 25px 25px !important;
+    margin: 0 !important;
+
+    br { display: none; }
+  }
+
+  #questions {
+    .box { margin-top: -10px !important; }
+  }
+
+  .jq-fadein {
+    opacity: 1 !important;
+  }
+}

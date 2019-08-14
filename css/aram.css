@@ -1,0 +1,647 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* line 3, ../scss/config/_reset.scss */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 8, ../scss/config/_reset.scss */
+body {
+  margin: 0;
+}
+
+/* line 12, ../scss/config/_reset.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 17, ../scss/config/_reset.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/* line 23, ../scss/config/_reset.scss */
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 28, ../scss/config/_reset.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 32, ../scss/config/_reset.scss */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/* line 38, ../scss/config/_reset.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* line 43, ../scss/config/_reset.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 50, ../scss/config/_reset.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 54, ../scss/config/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 62, ../scss/config/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 66, ../scss/config/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 70, ../scss/config/_reset.scss */
+img {
+  border-style: none;
+}
+
+/* line 74, ../scss/config/_reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* line 85, ../scss/config/_reset.scss */
+button,
+input {
+  overflow: visible;
+}
+
+/* line 90, ../scss/config/_reset.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 95, ../scss/config/_reset.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/* line 103, ../scss/config/_reset.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* line 111, ../scss/config/_reset.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* line 118, ../scss/config/_reset.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/* line 122, ../scss/config/_reset.scss */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 131, ../scss/config/_reset.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/* line 135, ../scss/config/_reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 139, ../scss/config/_reset.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 145, ../scss/config/_reset.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* line 151, ../scss/config/_reset.scss */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 155, ../scss/config/_reset.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* line 160, ../scss/config/_reset.scss */
+details {
+  display: block;
+}
+
+/* line 164, ../scss/config/_reset.scss */
+summary {
+  display: list-item;
+}
+
+/* line 168, ../scss/config/_reset.scss */
+template {
+  display: none;
+}
+
+/* line 172, ../scss/config/_reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 180, ../scss/config/_reset.scss */
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 185, ../scss/config/_reset.scss */
+li {
+  list-style: none;
+}
+
+/* line 187, ../scss/config/_reset.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 192, ../scss/config/_reset.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 11, ../scss/config/_setting.scss */
+.des--l {
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+}
+/* line 15, ../scss/config/_setting.scss */
+.des--l:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* line 18, ../scss/config/_setting.scss */
+.des--m {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+}
+/* line 22, ../scss/config/_setting.scss */
+.des--m:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 27, ../scss/config/_setting.scss */
+  .des--l {
+    letter-spacing: 0.03em;
+  }
+
+  /* line 31, ../scss/config/_setting.scss */
+  .des--m {
+    letter-spacing: 0.03em;
+  }
+}
+/* line 38, ../scss/config/_setting.scss */
+.en .des--l {
+  font-family: "Helvetica Neue", HelveticaNeue, "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+}
+/* line 44, ../scss/config/_setting.scss */
+.en .des--m {
+  font-family: "Helvetica Neue", HelveticaNeue, "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
+/* line 8, ../scss/aram.scss */
+body, html {
+  background-color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  animation: fadein 1s ease-in 1 forwards;
+  color: #363846;
+  letter-spacing: 0.05em;
+  line-height: 1.3em;
+}
+
+/* line 21, ../scss/aram.scss */
+a {
+  color: #3ec9f4;
+}
+
+/* line 22, ../scss/aram.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 24, ../scss/aram.scss */
+.main-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100vh 100vh 100vh 100vh 100vh;
+  grid-template-rows: 100vh 100vh 100vh 100vh 100vh;
+  -ms-grid-colmuns: 100vw;
+  grid-template-columns: 100vw;
+}
+/* line 32, ../scss/aram.scss */
+.main-grid > * {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* line 38, ../scss/aram.scss */
+.fixed_image {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+/* line 49, ../scss/aram.scss */
+#background {
+  background-image: url("../aram/img/background.png");
+  z-index: 0;
+}
+
+/* line 54, ../scss/aram.scss */
+#soraka {
+  background-image: url("../aram/img/soraka.png");
+  z-index: 2;
+  display: none;
+}
+
+/* line 60, ../scss/aram.scss */
+#lulu {
+  background-image: url("../aram/img/lulu.png");
+  z-index: 2;
+  display: none;
+}
+
+/* line 66, ../scss/aram.scss */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 71, ../scss/aram.scss */
+.image-title {
+  position: absolute;
+  top: -60px;
+}
+
+/* line 76, ../scss/aram.scss */
+.circle-list li {
+  margin-left: 20px;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+/* line 82, ../scss/aram.scss */
+.circle-list li:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 7px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid #3ec9f4;
+}
+
+/* line 95, ../scss/aram.scss */
+.num-list li {
+  margin-left: 20px;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+/* line 101, ../scss/aram.scss */
+.num-list li h4 {
+  font-weight: 600;
+  margin: 15px 0 10px;
+}
+/* line 106, ../scss/aram.scss */
+.num-list li .num {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  color: #3ec9f4;
+}
+
+/* line 114, ../scss/aram.scss */
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6e7f99;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+/* line 120, ../scss/aram.scss */
+h3:first-of-type {
+  margin-top: 0;
+}
+
+/* line 123, ../scss/aram.scss */
+h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* line 128, ../scss/aram.scss */
+p {
+  margin: 10px 0;
+  color: #6e7f99;
+  font-size: 14px;
+}
+
+/* line 134, ../scss/aram.scss */
+#top {
+  z-index: 5;
+}
+
+/* line 138, ../scss/aram.scss */
+#logo {
+  background-image: url("../aram/img/logo.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+  animation: fadein 1s 2s 1 forwards;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 150, ../scss/aram.scss */
+#logo span {
+  display: none;
+}
+
+/* line 153, ../scss/aram.scss */
+#summary {
+  background: rgba(255, 255, 255, 0.7);
+}
+/* line 156, ../scss/aram.scss */
+#summary .box {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  background: #fff;
+  padding: 40px 50px;
+  width: 480px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
+}
+/* line 168, ../scss/aram.scss */
+#summary dl {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 0 30px;
+}
+/* line 175, ../scss/aram.scss */
+#summary dl dt {
+  width: 25%;
+  color: #6e7f99;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 182, ../scss/aram.scss */
+#summary dl dd {
+  font-size: 14px;
+  width: 75%;
+  margin: 0;
+}
+/* line 186, ../scss/aram.scss */
+#summary dl dd:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/* line 191, ../scss/aram.scss */
+#entry {
+  background: rgba(255, 255, 255, 0.7);
+}
+/* line 194, ../scss/aram.scss */
+#entry .box {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  background: #fff;
+  padding: 40px 50px;
+  width: 600px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
+}
+
+/* line 207, ../scss/aram.scss */
+#event {
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+}
+/* line 212, ../scss/aram.scss */
+#event .box {
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px 50px;
+  width: 650px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
+}
+/* line 222, ../scss/aram.scss */
+#event .nunu {
+  position: absolute;
+  bottom: -40px;
+  right: -120px;
+  height: 300px;
+}
+
+/* line 230, ../scss/aram.scss */
+#questions {
+  background: #fff;
+  display: flex;
+}
+/* line 234, ../scss/aram.scss */
+#questions .box {
+  background: #fff;
+  position: relative;
+  margin: 100px auto 0;
+  padding: 40px 50px;
+  width: 920px;
+}
+/* line 242, ../scss/aram.scss */
+#questions h3 {
+  margin-top: 60px !important;
+}
+
+/* line 248, ../scss/aram.scss */
+.jq-fadein {
+  opacity: 0;
+  transform: translate(0, 40px);
+  transition: all 1s;
+}
+
+/* line 254, ../scss/aram.scss */
+.jq-fadein.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 268, ../scss/aram.scss */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* line 270, ../scss/aram.scss */
+  .sp-hide {
+    display: none;
+  }
+
+  /* line 272, ../scss/aram.scss */
+  .main-grid {
+    display: block;
+  }
+  /* line 274, ../scss/aram.scss */
+  .main-grid > * {
+    overflow: visible;
+  }
+
+  /* line 277, ../scss/aram.scss */
+  section {
+    margin: 30px 0 20px;
+    padding: 10px;
+    background: transparent !important;
+  }
+
+  /* line 283, ../scss/aram.scss */
+  p {
+    font-size: 13px;
+  }
+
+  /* line 287, ../scss/aram.scss */
+  #background {
+    background-image: url("../aram/img/background_sp.jpg");
+  }
+
+  /* line 291, ../scss/aram.scss */
+  #soraka, #lulu {
+    background-image: none;
+  }
+
+  /* line 295, ../scss/aram.scss */
+  #top {
+    height: 100vh;
+    margin: 0;
+  }
+  /* line 298, ../scss/aram.scss */
+  #top #logo {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  /* line 301, ../scss/aram.scss */
+  .image-title {
+    top: -30px;
+  }
+
+  /* line 305, ../scss/aram.scss */
+  .box {
+    position: static !important;
+    width: auto !important;
+    border-radius: 10px;
+    padding: 60px 25px 25px !important;
+    margin: 0 !important;
+  }
+  /* line 312, ../scss/aram.scss */
+  .box br {
+    display: none;
+  }
+
+  /* line 316, ../scss/aram.scss */
+  #questions .box {
+    margin-top: -10px !important;
+  }
+
+  /* line 319, ../scss/aram.scss */
+  .jq-fadein {
+    opacity: 1 !important;
+  }
+}
