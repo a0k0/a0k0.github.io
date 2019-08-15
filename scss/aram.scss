@@ -1,5 +1,6 @@
 @import "config/reset";
 @import "config/setting";
+@import "module/form";
 
 $color-black: #363846;
 $color-accent: #3ec9f4;
@@ -318,5 +319,62 @@ p {
 
   .jq-fadein {
     opacity: 1 !important;
+  }
+}
+
+
+
+
+
+//------------------------------------------------------------------------------
+// forms
+
+
+.aram-form {
+  background: rgba($color-white, 0.95);
+  position: relative;
+  margin: 50px auto;
+  padding: 50px;
+  width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba($color-black, 0.05);
+
+  .title {
+    font-size: 18px;
+    margin: 0 0 20px;
+  }
+
+  .grid-form {
+    -ms-grid-colmuns: 180px 420px;
+    grid-template-columns: 180px 420px;
+    margin-top: 30px;
+
+    > label {
+      font-size: 13px;
+      color: $color-gray;
+      font-weight: 600;
+      margin-left: 0;
+    }
+  }
+
+  input, textarea {
+    background: $color-white;
+    border: 1px solid rgba($color-gray, 0.2);
+
+    &:focus {
+      border: 1px solid $color-accent;
+    }
+  }
+
+  .btn_f-blue {
+    margin: 20px 0 0;
+    background: $color-accent;
+  }
+
+  .nunu {
+    position: absolute;
+    bottom: -40px;
+    right: -100px;
+    height: 300px;
   }
 }

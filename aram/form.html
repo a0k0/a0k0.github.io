@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <title>参加表明 - ハウリングアビスへようこそ！</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="オンリーイベント「UNLIMITED EX5」内で実施予定の、リーグオブレジェンドプチオンリー企画です。参加表明はこちらから">
+  <meta property="og:title" content="参加表明 - ハウリングアビスへようこそ！" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://a0k0.me/aram/" />
+  <meta property="og:image" content="https://a0k0.me/aram/img/ogp.png" />
+  <meta property="og:site_name" content="Welcome to HowlingAbyss" />
+  <meta property="og:description" content="オンリーイベント「UNLIMITED EX5」内で実施予定の、リーグオブレジェンドプチオンリー企画です。参加表明はこちらから" />
+  <meta property="fb:app_id" content="227318177890145" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@wt_howlingabyss" />
+  <meta name="twitter:player" content="@wt_howlingabyss" />
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/aram.css" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122073463-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-122073463-1');
+  </script>
+</head>
+<body>
+<div class="fixed_image" id="background"></div>
+
+<main class="aram-form">
+  <div>
+    <h1 class="title">
+      参加表明
+    </h1>
+    <p class="des--l">
+      参加表明は、
+      <a href="https://www.akaboo.jp/event/item/20190289.html" target="_blank">UNLIMITED EX5</a>
+      への申込みが完了してから行ってください。<br/>
+      参加表明のでプチオンリーに参加することはできません。
+    </p>
+  </div>
+
+  <form class="section-contents grid-form">
+    <label>サークル名</label>
+    <input id="circle" class="form" type="text" placeholder="例）Tasted Purple" required />
+
+    <label>代表者名（ペンネーム）</label>
+    <input id="name" class="form" type="text" placeholder="例）あおこ" required />
+
+    <label>メールアドレス</label>
+    <input id="mail" class="form" type="email" placeholder="例）welcome2howling@abyss.com" required />
+
+    <label>Twitter ID（任意）</label>
+    <input id="twitter" class="form" type="email" placeholder="例）@wt_howlingabyss" />
+
+    <label>サイトURL（任意）</label>
+    <input id="url" class="form" type="email" placeholder="例）https://a0k0.me" />
+
+    <label>頒布内容</label>
+    <textarea id="detail" class="form" rows="4" placeholder="チャンピオン名、同人誌やグッズ、成人向けか全年齢か等、100文字以内で記載してください" required></textarea>
+
+    <button class="btn_f-blue" type="button" onclick="postToGoogle()">送信する</button>
+  </form>
+
+  <img class="nunu sp-hide" src="img/nunu.png" />
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+function postToGoogle() {
+  var circle = $('#circle').val();
+  var name = $('#name').val();
+  var mail = $('#mail').val();
+  var twitter = $('#twitter').val();
+  var url = $('#url').val();
+  var detail = $('#detail').val();
+
+  $.ajax({
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScOnJ_0R-E67VuuuIIBY7WI43rMFlGDMA3lGAed4AnKUnOQ_Q/formResponse",
+    data: {
+      "entry.275979079": circle,
+      "entry.569900805": name,
+      "entry.1205166352": mail,
+      "entry.354566241": twitter,
+      "entry.523859924": url,
+      "entry.1937260003": detail
+    },
+    type: "POST",
+    dataType: "xml",
+    statusCode: {
+      0: function() {
+        alert('送信が完了しました。1週間以内にメールにて返信しますので、しばらくお待ち下さい。');
+      },
+      200: function() {
+        alert('送信が完了しました。1週間以内にメールにて返信しますので、しばらくお待ち下さい。');
+      }
+    }
+  });
+}
+</script>
+
+
+</body>
+</html>
