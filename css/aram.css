@@ -918,3 +918,89 @@ p {
   right: -100px;
   height: 300px;
 }
+
+/* line 387, ../scss/aram.scss */
+.sub-header {
+  background-image: url("../aram/img/header.png");
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+/* line 395, ../scss/aram.scss */
+#circles .image-title {
+  left: -15px;
+  top: -50px;
+  z-index: 1;
+}
+/* line 401, ../scss/aram.scss */
+#circles .box {
+  position: relative;
+  margin: 80px auto;
+  width: 930px;
+}
+/* line 407, ../scss/aram.scss */
+#circles h3 {
+  margin-top: 60px !important;
+}
+/* line 411, ../scss/aram.scss */
+#circles .member-list {
+  margin: -10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 340px 340px 340px 340px 340px;
+  grid-template-rows: 340px 340px 340px 340px 340px;
+  -ms-grid-colmuns: 190px 190px 190px 190px 190px;
+  grid-template-columns: 190px 190px 190px 190px 190px;
+}
+/* line 420, ../scss/aram.scss */
+#circles .member-list li {
+  margin: 10px;
+  position: relative;
+}
+/* line 426, ../scss/aram.scss */
+#circles .image {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  border-radius: 10px;
+  background-color: #dde4fb;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+  text-decoration: none !important;
+}
+/* line 441, ../scss/aram.scss */
+#circles .image:hover {
+  opacity: 0.7;
+}
+/* line 444, ../scss/aram.scss */
+#circles h3 {
+  font-size: 13px;
+  color: #363846;
+  margin: 15px 0 10px !important;
+}
+/* line 450, ../scss/aram.scss */
+#circles .summary {
+  font-size: 11px;
+  letter-spacing: 0;
+  text-align: justify;
+  line-height: 18px;
+}
+/* line 457, ../scss/aram.scss */
+#circles .links {
+  position: absolute;
+  bottom: 0;
+}
+/* line 462, ../scss/aram.scss */
+#circles .links a {
+  transition: 0.1s;
+}
+/* line 464, ../scss/aram.scss */
+#circles .links a:hover {
+  opacity: 0.6;
+}

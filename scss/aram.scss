@@ -378,3 +378,89 @@ p {
     height: 300px;
   }
 }
+
+
+
+//------------------------------------------------------------------------------
+// circles
+
+.sub-header {
+  background-image: url('../aram/img/header.png');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+#circles {
+  .image-title {
+    left: -15px;
+    top: -50px;
+    z-index: 1;
+  }
+
+  .box {
+    position: relative;
+    margin: 80px auto;
+    width: 930px;
+  }
+
+  h3 {
+    margin-top: 60px !important;
+  }
+
+  .member-list {
+    margin: -10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 340px 340px 340px 340px 340px;
+    grid-template-rows: 340px 340px 340px 340px 340px;
+    -ms-grid-colmuns: 190px 190px 190px 190px 190px;
+    grid-template-columns: 190px 190px 190px 190px 190px;
+
+    li {
+      margin: 10px;
+      position: relative;
+    }
+  }
+
+  .image {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: $color-white;
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    border-radius: 10px;
+    background-color: #dde4fb;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s;
+    text-decoration: none !important;
+
+    &:hover { opacity: 0.7; }
+  }
+
+  h3 {
+    font-size: 13px;
+    color: $color-black;
+    margin: 15px 0 10px !important;
+  }
+
+  .summary {
+    font-size: 11px;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 18px;
+  }
+
+  .links {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .links a {
+    transition: 0.1s;
+    &:hover { opacity: 0.6; }
+  }
+}
