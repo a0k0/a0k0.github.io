@@ -379,6 +379,23 @@ p {
   }
 }
 
+@media screen and (max-width : 480px) {
+  .aram-form {
+    background: $color-white;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    padding: 40px 20px;
+
+    br { display: none; }
+
+    .grid-form > label {
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+}
+
 
 
 //------------------------------------------------------------------------------
