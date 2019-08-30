@@ -956,7 +956,7 @@ p {
 #circles .box {
   position: relative;
   margin: 80px auto;
-  width: 930px;
+  width: 1000px;
 }
 /* line 424, ../scss/aram.scss */
 #circles h3 {
@@ -967,10 +967,10 @@ p {
   margin: -10px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 340px 340px 340px 340px 340px 340px 340px;
-  grid-template-rows: 340px 340px 340px 340px 340px 340px 340px;
-  -ms-grid-colmuns: 190px 190px 190px 190px 190px;
-  grid-template-columns: 190px 190px 190px 190px 190px;
+  -ms-grid-rows: 355px 355px 355px 355px 355px 355px 355px;
+  grid-template-rows: 355px 355px 355px 355px 355px 355px 355px;
+  -ms-grid-colmuns: 200px 200px 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px 200px 200px;
 }
 /* line 437, ../scss/aram.scss */
 #circles .member-list li {
@@ -983,9 +983,9 @@ p {
   text-align: center;
   font-weight: bold;
   color: #fff;
-  width: 170px;
-  height: 170px;
-  line-height: 170px;
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
   border-radius: 10px;
   background-color: #dde4fb;
   background-size: cover;
