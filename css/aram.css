@@ -940,29 +940,45 @@ p {
 }
 /* line 404, ../scss/aram.scss */
 .sub-header {
+  height: 250px;
+}
+/* line 407, ../scss/aram.scss */
+.sub-header .image {
+  position: fixed;
+  z-index: 1;
   background-image: url("../aram/img/header.png");
   background-size: cover;
   background-position: center;
   height: 250px;
+  width: 100vw;
 }
 
-/* line 412, ../scss/aram.scss */
+/* line 418, ../scss/aram.scss */
+#circles {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  padding: 60px 0;
+  border-top: 8px solid #363846;
+}
+/* line 425, ../scss/aram.scss */
 #circles .image-title {
-  left: -15px;
-  top: -50px;
+  left: 0;
+  top: -85px;
   z-index: 1;
 }
-/* line 418, ../scss/aram.scss */
+/* line 431, ../scss/aram.scss */
 #circles .box {
   position: relative;
-  margin: 80px auto;
-  width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 1040px;
 }
-/* line 424, ../scss/aram.scss */
+/* line 438, ../scss/aram.scss */
 #circles h3 {
   margin-top: 60px !important;
 }
-/* line 428, ../scss/aram.scss */
+/* line 442, ../scss/aram.scss */
 #circles .member-list {
   margin: -10px;
   display: -ms-grid;
@@ -972,12 +988,12 @@ p {
   -ms-grid-colmuns: 200px 200px 200px 200px 200px;
   grid-template-columns: 200px 200px 200px 200px 200px;
 }
-/* line 437, ../scss/aram.scss */
+/* line 451, ../scss/aram.scss */
 #circles .member-list li {
   margin: 10px;
   position: relative;
 }
-/* line 443, ../scss/aram.scss */
+/* line 457, ../scss/aram.scss */
 #circles .image {
   display: block;
   text-align: center;
@@ -993,33 +1009,33 @@ p {
   transition: 0.2s;
   text-decoration: none !important;
 }
-/* line 458, ../scss/aram.scss */
+/* line 472, ../scss/aram.scss */
 #circles .image:hover {
   opacity: 0.7;
 }
-/* line 461, ../scss/aram.scss */
+/* line 475, ../scss/aram.scss */
 #circles h3 {
   font-size: 13px;
   color: #363846;
   margin: 15px 0 10px !important;
 }
-/* line 467, ../scss/aram.scss */
+/* line 481, ../scss/aram.scss */
 #circles .summary {
   font-size: 11px;
   letter-spacing: 0;
   text-align: justify;
   line-height: 18px;
 }
-/* line 474, ../scss/aram.scss */
+/* line 488, ../scss/aram.scss */
 #circles .links {
   position: absolute;
   bottom: 0;
 }
-/* line 479, ../scss/aram.scss */
+/* line 493, ../scss/aram.scss */
 #circles .links a {
   transition: 0.1s;
 }
-/* line 481, ../scss/aram.scss */
+/* line 495, ../scss/aram.scss */
 #circles .links a:hover {
   opacity: 0.6;
 }
