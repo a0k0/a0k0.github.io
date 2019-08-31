@@ -16,6 +16,7 @@ body, html {
   animation: fadein 1s ease-in 1 forwards;
   color: $color-black;
   letter-spacing: 0.05em;
+  overflow-x: hidden;
   line-height: 1.3em;
 }
 
@@ -137,6 +138,7 @@ p {
 }
 
 #logo {
+  cursor: pointer;
   background-image: url('../aram/img/logo.png');
   background-size: cover;
   width: 300px;
@@ -147,8 +149,13 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: 0.2s;
   transform: translate(-50%, -50%);
   span { display: none; }
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.03);
+  }
 }
 
 #summary {

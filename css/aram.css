@@ -505,20 +505,21 @@ body, html {
   animation: fadein 1s ease-in 1 forwards;
   color: #363846;
   letter-spacing: 0.05em;
+  overflow-x: hidden;
   line-height: 1.3em;
 }
 
-/* line 22, ../scss/aram.scss */
+/* line 23, ../scss/aram.scss */
 a {
   color: #3ec9f4;
 }
 
-/* line 23, ../scss/aram.scss */
+/* line 24, ../scss/aram.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 25, ../scss/aram.scss */
+/* line 26, ../scss/aram.scss */
 .main-grid {
   display: -ms-grid;
   display: grid;
@@ -527,13 +528,13 @@ a:hover {
   -ms-grid-colmuns: 100vw;
   grid-template-columns: 100vw;
 }
-/* line 33, ../scss/aram.scss */
+/* line 34, ../scss/aram.scss */
 .main-grid > * {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-/* line 39, ../scss/aram.scss */
+/* line 40, ../scss/aram.scss */
 .fixed_image {
   width: 100vw;
   height: 100vh;
@@ -545,46 +546,46 @@ a:hover {
   left: 0;
 }
 
-/* line 50, ../scss/aram.scss */
+/* line 51, ../scss/aram.scss */
 #background {
   background-image: url("../aram/img/background.png");
   z-index: 0;
 }
 
-/* line 55, ../scss/aram.scss */
+/* line 56, ../scss/aram.scss */
 #soraka {
   background-image: url("../aram/img/soraka.png");
   z-index: 2;
   display: none;
 }
 
-/* line 61, ../scss/aram.scss */
+/* line 62, ../scss/aram.scss */
 #lulu {
   background-image: url("../aram/img/lulu.png");
   z-index: 2;
   display: none;
 }
 
-/* line 67, ../scss/aram.scss */
+/* line 68, ../scss/aram.scss */
 section {
   position: relative;
   z-index: 1;
 }
 
-/* line 72, ../scss/aram.scss */
+/* line 73, ../scss/aram.scss */
 .image-title {
   position: absolute;
   top: -60px;
 }
 
-/* line 77, ../scss/aram.scss */
+/* line 78, ../scss/aram.scss */
 .circle-list li {
   margin-left: 20px;
   position: relative;
   font-size: 14px;
   margin-bottom: 2px;
 }
-/* line 83, ../scss/aram.scss */
+/* line 84, ../scss/aram.scss */
 .circle-list li:before {
   content: "";
   position: absolute;
@@ -597,19 +598,19 @@ section {
   border: 1px solid #3ec9f4;
 }
 
-/* line 96, ../scss/aram.scss */
+/* line 97, ../scss/aram.scss */
 .num-list li {
   margin-left: 20px;
   position: relative;
   font-size: 14px;
   margin-bottom: 2px;
 }
-/* line 102, ../scss/aram.scss */
+/* line 103, ../scss/aram.scss */
 .num-list li h4 {
   font-weight: 600;
   margin: 15px 0 10px;
 }
-/* line 107, ../scss/aram.scss */
+/* line 108, ../scss/aram.scss */
 .num-list li .num {
   position: absolute;
   left: -20px;
@@ -617,7 +618,7 @@ section {
   color: #3ec9f4;
 }
 
-/* line 115, ../scss/aram.scss */
+/* line 116, ../scss/aram.scss */
 h3 {
   font-size: 15px;
   font-weight: 600;
@@ -625,31 +626,32 @@ h3 {
   margin-top: 30px;
   margin-bottom: 15px;
 }
-/* line 121, ../scss/aram.scss */
+/* line 122, ../scss/aram.scss */
 h3:first-of-type {
   margin-top: 0;
 }
 
-/* line 124, ../scss/aram.scss */
+/* line 125, ../scss/aram.scss */
 h4 {
   font-size: 14px;
   font-weight: 600;
 }
 
-/* line 129, ../scss/aram.scss */
+/* line 130, ../scss/aram.scss */
 p {
   margin: 10px 0;
   color: #6e7f99;
   font-size: 14px;
 }
 
-/* line 135, ../scss/aram.scss */
+/* line 136, ../scss/aram.scss */
 #top {
   z-index: 5;
 }
 
-/* line 139, ../scss/aram.scss */
+/* line 140, ../scss/aram.scss */
 #logo {
+  cursor: pointer;
   background-image: url("../aram/img/logo.png");
   background-size: cover;
   width: 300px;
@@ -660,18 +662,23 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: 0.2s;
   transform: translate(-50%, -50%);
 }
-/* line 151, ../scss/aram.scss */
+/* line 154, ../scss/aram.scss */
 #logo span {
   display: none;
 }
+/* line 156, ../scss/aram.scss */
+#logo:hover {
+  transform: translate(-50%, -50%) scale(1.03);
+}
 
-/* line 154, ../scss/aram.scss */
+/* line 161, ../scss/aram.scss */
 #summary {
   background: rgba(255, 255, 255, 0.7);
 }
-/* line 157, ../scss/aram.scss */
+/* line 164, ../scss/aram.scss */
 #summary .box {
   position: absolute;
   top: 120px;
@@ -683,7 +690,7 @@ p {
   border-bottom-right-radius: 10px;
   box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
 }
-/* line 169, ../scss/aram.scss */
+/* line 176, ../scss/aram.scss */
 #summary dl {
   display: -webkit-flex;
   display: flex;
@@ -691,29 +698,29 @@ p {
   flex-wrap: wrap;
   margin: 0 0 30px;
 }
-/* line 176, ../scss/aram.scss */
+/* line 183, ../scss/aram.scss */
 #summary dl dt {
   width: 25%;
   color: #6e7f99;
   font-size: 14px;
   font-weight: bold;
 }
-/* line 183, ../scss/aram.scss */
+/* line 190, ../scss/aram.scss */
 #summary dl dd {
   font-size: 14px;
   width: 75%;
   margin: 0;
 }
-/* line 187, ../scss/aram.scss */
+/* line 194, ../scss/aram.scss */
 #summary dl dd:not(:last-child) {
   margin-bottom: 5px;
 }
 
-/* line 192, ../scss/aram.scss */
+/* line 199, ../scss/aram.scss */
 #entry {
   background: rgba(255, 255, 255, 0.7);
 }
-/* line 195, ../scss/aram.scss */
+/* line 202, ../scss/aram.scss */
 #entry .box {
   position: absolute;
   bottom: 50px;
@@ -726,13 +733,13 @@ p {
   box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
 }
 
-/* line 208, ../scss/aram.scss */
+/* line 215, ../scss/aram.scss */
 #event {
   background: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
 }
-/* line 213, ../scss/aram.scss */
+/* line 220, ../scss/aram.scss */
 #event .box {
   position: relative;
   margin: 0 auto;
@@ -742,7 +749,7 @@ p {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
 }
-/* line 223, ../scss/aram.scss */
+/* line 230, ../scss/aram.scss */
 #event .nunu {
   position: absolute;
   bottom: -40px;
@@ -750,12 +757,12 @@ p {
   height: 300px;
 }
 
-/* line 231, ../scss/aram.scss */
+/* line 238, ../scss/aram.scss */
 #questions {
   background: #fff;
   display: flex;
 }
-/* line 235, ../scss/aram.scss */
+/* line 242, ../scss/aram.scss */
 #questions .box {
   background: #fff;
   position: relative;
@@ -763,19 +770,19 @@ p {
   padding: 40px 50px;
   width: 920px;
 }
-/* line 243, ../scss/aram.scss */
+/* line 250, ../scss/aram.scss */
 #questions h3 {
   margin-top: 60px !important;
 }
 
-/* line 249, ../scss/aram.scss */
+/* line 256, ../scss/aram.scss */
 .jq-fadein {
   opacity: 0;
   transform: translate(0, 40px);
   transition: all 1s;
 }
 
-/* line 255, ../scss/aram.scss */
+/* line 262, ../scss/aram.scss */
 .jq-fadein.scrollin {
   opacity: 1;
   transform: translate(0, 0);
@@ -790,63 +797,63 @@ p {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 269, ../scss/aram.scss */
+  /* line 276, ../scss/aram.scss */
   body, html {
     overflow-x: hidden;
   }
 
-  /* line 271, ../scss/aram.scss */
+  /* line 278, ../scss/aram.scss */
   .sp-hide {
     display: none;
   }
 
-  /* line 273, ../scss/aram.scss */
+  /* line 280, ../scss/aram.scss */
   .main-grid {
     display: block;
   }
-  /* line 275, ../scss/aram.scss */
+  /* line 282, ../scss/aram.scss */
   .main-grid > * {
     overflow: visible;
   }
 
-  /* line 278, ../scss/aram.scss */
+  /* line 285, ../scss/aram.scss */
   section {
     margin: 30px 0 20px;
     padding: 10px;
     background: transparent !important;
   }
 
-  /* line 284, ../scss/aram.scss */
+  /* line 291, ../scss/aram.scss */
   p {
     font-size: 13px;
   }
 
-  /* line 288, ../scss/aram.scss */
+  /* line 295, ../scss/aram.scss */
   #background {
     background-image: url("../aram/img/background_sp.jpg");
   }
 
-  /* line 292, ../scss/aram.scss */
+  /* line 299, ../scss/aram.scss */
   #soraka, #lulu {
     background-image: none;
   }
 
-  /* line 296, ../scss/aram.scss */
+  /* line 303, ../scss/aram.scss */
   #top {
     height: 100vh;
     margin: 0;
   }
-  /* line 299, ../scss/aram.scss */
+  /* line 306, ../scss/aram.scss */
   #top #logo {
     transform: translate(-50%, -50%) scale(0.7);
   }
 
-  /* line 302, ../scss/aram.scss */
+  /* line 309, ../scss/aram.scss */
   .image-title {
     top: -30px;
   }
 
-  /* line 306, ../scss/aram.scss */
+  /* line 313, ../scss/aram.scss */
   .box {
     position: static !important;
     width: auto !important;
@@ -854,22 +861,22 @@ p {
     padding: 60px 25px 25px !important;
     margin: 0 !important;
   }
-  /* line 313, ../scss/aram.scss */
+  /* line 320, ../scss/aram.scss */
   .box br {
     display: none;
   }
 
-  /* line 317, ../scss/aram.scss */
+  /* line 324, ../scss/aram.scss */
   #questions .box {
     margin-top: -10px !important;
   }
 
-  /* line 320, ../scss/aram.scss */
+  /* line 327, ../scss/aram.scss */
   .jq-fadein {
     opacity: 1 !important;
   }
 }
-/* line 333, ../scss/aram.scss */
+/* line 340, ../scss/aram.scss */
 .aram-form {
   background: rgba(255, 255, 255, 0.95);
   position: relative;
@@ -879,39 +886,39 @@ p {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
 }
-/* line 342, ../scss/aram.scss */
+/* line 349, ../scss/aram.scss */
 .aram-form .title {
   font-size: 18px;
   margin: 0 0 20px;
 }
-/* line 347, ../scss/aram.scss */
+/* line 354, ../scss/aram.scss */
 .aram-form .grid-form {
   -ms-grid-colmuns: 180px 420px;
   grid-template-columns: 180px 420px;
   margin-top: 30px;
 }
-/* line 352, ../scss/aram.scss */
+/* line 359, ../scss/aram.scss */
 .aram-form .grid-form > label {
   font-size: 13px;
   color: #6e7f99;
   font-weight: 600;
   margin-left: 0;
 }
-/* line 360, ../scss/aram.scss */
+/* line 367, ../scss/aram.scss */
 .aram-form input, .aram-form textarea {
   background: #fff;
   border: 1px solid rgba(110, 127, 153, 0.2);
 }
-/* line 364, ../scss/aram.scss */
+/* line 371, ../scss/aram.scss */
 .aram-form input:focus, .aram-form textarea:focus {
   border: 1px solid #3ec9f4;
 }
-/* line 369, ../scss/aram.scss */
+/* line 376, ../scss/aram.scss */
 .aram-form .btn_f-blue {
   margin: 20px 0 0;
   background: #3ec9f4;
 }
-/* line 374, ../scss/aram.scss */
+/* line 381, ../scss/aram.scss */
 .aram-form .nunu {
   position: absolute;
   bottom: -40px;
@@ -920,7 +927,7 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 383, ../scss/aram.scss */
+  /* line 390, ../scss/aram.scss */
   .aram-form {
     background: #fff;
     margin: 0;
@@ -928,21 +935,21 @@ p {
     width: 100%;
     padding: 40px 20px;
   }
-  /* line 390, ../scss/aram.scss */
+  /* line 397, ../scss/aram.scss */
   .aram-form br {
     display: none;
   }
-  /* line 392, ../scss/aram.scss */
+  /* line 399, ../scss/aram.scss */
   .aram-form .grid-form > label {
     display: block;
     margin-bottom: 3px;
   }
 }
-/* line 404, ../scss/aram.scss */
+/* line 411, ../scss/aram.scss */
 .sub-header {
   height: 250px;
 }
-/* line 407, ../scss/aram.scss */
+/* line 414, ../scss/aram.scss */
 .sub-header .image {
   position: fixed;
   z-index: 1;
@@ -953,7 +960,7 @@ p {
   width: 100vw;
 }
 
-/* line 418, ../scss/aram.scss */
+/* line 425, ../scss/aram.scss */
 #circles {
   background: #fff;
   position: relative;
@@ -961,24 +968,24 @@ p {
   padding: 60px 0;
   border-top: 8px solid #363846;
 }
-/* line 425, ../scss/aram.scss */
+/* line 432, ../scss/aram.scss */
 #circles .image-title {
   left: 0;
   top: -85px;
   z-index: 1;
 }
-/* line 431, ../scss/aram.scss */
+/* line 438, ../scss/aram.scss */
 #circles .box {
   position: relative;
   margin: 0 auto;
   padding: 0 20px;
   width: 1040px;
 }
-/* line 438, ../scss/aram.scss */
+/* line 445, ../scss/aram.scss */
 #circles h3 {
   margin-top: 60px !important;
 }
-/* line 442, ../scss/aram.scss */
+/* line 449, ../scss/aram.scss */
 #circles .member-list {
   margin: -10px;
   display: -ms-grid;
@@ -988,12 +995,12 @@ p {
   -ms-grid-colmuns: 200px 200px 200px 200px 200px;
   grid-template-columns: 200px 200px 200px 200px 200px;
 }
-/* line 451, ../scss/aram.scss */
+/* line 458, ../scss/aram.scss */
 #circles .member-list li {
   margin: 10px;
   position: relative;
 }
-/* line 457, ../scss/aram.scss */
+/* line 464, ../scss/aram.scss */
 #circles .image {
   display: block;
   text-align: center;
@@ -1009,69 +1016,69 @@ p {
   transition: 0.2s;
   text-decoration: none !important;
 }
-/* line 472, ../scss/aram.scss */
+/* line 479, ../scss/aram.scss */
 #circles .image:hover {
   opacity: 0.7;
 }
-/* line 475, ../scss/aram.scss */
+/* line 482, ../scss/aram.scss */
 #circles h3 {
   font-size: 13px;
   color: #363846;
   margin: 15px 0 10px !important;
 }
-/* line 481, ../scss/aram.scss */
+/* line 488, ../scss/aram.scss */
 #circles .summary {
   font-size: 11px;
   letter-spacing: 0;
   text-align: justify;
   line-height: 18px;
 }
-/* line 488, ../scss/aram.scss */
+/* line 495, ../scss/aram.scss */
 #circles .links {
   position: absolute;
   bottom: 0;
 }
-/* line 493, ../scss/aram.scss */
+/* line 500, ../scss/aram.scss */
 #circles .links a {
   transition: 0.1s;
 }
-/* line 495, ../scss/aram.scss */
+/* line 502, ../scss/aram.scss */
 #circles .links a:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 480px) {
-  /* line 501, ../scss/aram.scss */
+  /* line 508, ../scss/aram.scss */
   #circles {
     padding: 30px 0;
     background: #fff !important;
     margin: 0;
   }
-  /* line 506, ../scss/aram.scss */
+  /* line 513, ../scss/aram.scss */
   #circles .image-title {
     top: -40px;
     left: 5px;
   }
-  /* line 511, ../scss/aram.scss */
+  /* line 518, ../scss/aram.scss */
   #circles .box {
     padding: 0 20px !important;
   }
-  /* line 515, ../scss/aram.scss */
+  /* line 522, ../scss/aram.scss */
   #circles .member-list {
     grid-template-rows: auto;
     grid-template-columns: 50% 50%;
   }
-  /* line 518, ../scss/aram.scss */
+  /* line 525, ../scss/aram.scss */
   #circles .member-list li {
     margin: 8px;
   }
-  /* line 521, ../scss/aram.scss */
+  /* line 528, ../scss/aram.scss */
   #circles .image {
     width: 100%;
     height: 150px;
     line-height: 150px;
   }
-  /* line 527, ../scss/aram.scss */
+  /* line 534, ../scss/aram.scss */
   #circles .links {
     display: none;
   }
