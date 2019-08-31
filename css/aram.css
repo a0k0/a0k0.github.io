@@ -648,8 +648,38 @@ p {
 #top {
   z-index: 5;
 }
+/* line 139, ../scss/aram.scss */
+#top .button {
+  opacity: 0;
+  display: block;
+  outline: none;
+  width: 230px;
+  font-size: 15px;
+  padding: 13px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #363846;
+  color: #363846;
+  letter-spacing: 1.5px;
+  border-radius: 30px;
+  transition: 0.15s;
+  box-shadow: 0 2px 10px rgba(32, 171, 214, 0.4);
+  animation: fadein 0.8s 2.4s 1 forwards;
+}
+/* line 162, ../scss/aram.scss */
+#top .button:hover {
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(32, 171, 214, 0.7);
+  transform: translate(-50%, -50%) scale(1.03);
+}
 
-/* line 140, ../scss/aram.scss */
+/* line 170, ../scss/aram.scss */
 #logo {
   cursor: pointer;
   background-image: url("../aram/img/logo.png");
@@ -657,28 +687,28 @@ p {
   width: 300px;
   height: 300px;
   opacity: 0;
-  animation: fadein 1s 2s 1 forwards;
+  animation: fadein 1s 1.8s 1 forwards;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 50%;
   transition: 0.2s;
   transform: translate(-50%, -50%);
 }
-/* line 154, ../scss/aram.scss */
+/* line 184, ../scss/aram.scss */
 #logo span {
   display: none;
 }
-/* line 156, ../scss/aram.scss */
+/* line 186, ../scss/aram.scss */
 #logo:hover {
   transform: translate(-50%, -50%) scale(1.03);
 }
 
-/* line 161, ../scss/aram.scss */
+/* line 191, ../scss/aram.scss */
 #summary {
   background: rgba(255, 255, 255, 0.7);
 }
-/* line 164, ../scss/aram.scss */
+/* line 194, ../scss/aram.scss */
 #summary .box {
   position: absolute;
   top: 120px;
@@ -690,7 +720,7 @@ p {
   border-bottom-right-radius: 10px;
   box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
 }
-/* line 176, ../scss/aram.scss */
+/* line 206, ../scss/aram.scss */
 #summary dl {
   display: -webkit-flex;
   display: flex;
@@ -698,29 +728,29 @@ p {
   flex-wrap: wrap;
   margin: 0 0 30px;
 }
-/* line 183, ../scss/aram.scss */
+/* line 213, ../scss/aram.scss */
 #summary dl dt {
   width: 25%;
   color: #6e7f99;
   font-size: 14px;
   font-weight: bold;
 }
-/* line 190, ../scss/aram.scss */
+/* line 220, ../scss/aram.scss */
 #summary dl dd {
   font-size: 14px;
   width: 75%;
   margin: 0;
 }
-/* line 194, ../scss/aram.scss */
+/* line 224, ../scss/aram.scss */
 #summary dl dd:not(:last-child) {
   margin-bottom: 5px;
 }
 
-/* line 199, ../scss/aram.scss */
+/* line 229, ../scss/aram.scss */
 #entry {
   background: rgba(255, 255, 255, 0.7);
 }
-/* line 202, ../scss/aram.scss */
+/* line 232, ../scss/aram.scss */
 #entry .box {
   position: absolute;
   bottom: 50px;
@@ -733,13 +763,13 @@ p {
   box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
 }
 
-/* line 215, ../scss/aram.scss */
+/* line 245, ../scss/aram.scss */
 #event {
   background: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
 }
-/* line 220, ../scss/aram.scss */
+/* line 250, ../scss/aram.scss */
 #event .box {
   position: relative;
   margin: 0 auto;
@@ -749,7 +779,7 @@ p {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
 }
-/* line 230, ../scss/aram.scss */
+/* line 260, ../scss/aram.scss */
 #event .nunu {
   position: absolute;
   bottom: -40px;
@@ -757,12 +787,12 @@ p {
   height: 300px;
 }
 
-/* line 238, ../scss/aram.scss */
+/* line 268, ../scss/aram.scss */
 #questions {
   background: #fff;
   display: flex;
 }
-/* line 242, ../scss/aram.scss */
+/* line 272, ../scss/aram.scss */
 #questions .box {
   background: #fff;
   position: relative;
@@ -770,19 +800,19 @@ p {
   padding: 40px 50px;
   width: 920px;
 }
-/* line 250, ../scss/aram.scss */
+/* line 280, ../scss/aram.scss */
 #questions h3 {
   margin-top: 60px !important;
 }
 
-/* line 256, ../scss/aram.scss */
+/* line 286, ../scss/aram.scss */
 .jq-fadein {
   opacity: 0;
   transform: translate(0, 40px);
   transition: all 1s;
 }
 
-/* line 262, ../scss/aram.scss */
+/* line 292, ../scss/aram.scss */
 .jq-fadein.scrollin {
   opacity: 1;
   transform: translate(0, 0);
@@ -797,63 +827,71 @@ p {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 276, ../scss/aram.scss */
+  /* line 306, ../scss/aram.scss */
   body, html {
     overflow-x: hidden;
   }
 
-  /* line 278, ../scss/aram.scss */
+  /* line 308, ../scss/aram.scss */
   .sp-hide {
     display: none;
   }
 
-  /* line 280, ../scss/aram.scss */
+  /* line 310, ../scss/aram.scss */
   .main-grid {
     display: block;
   }
-  /* line 282, ../scss/aram.scss */
+  /* line 312, ../scss/aram.scss */
   .main-grid > * {
     overflow: visible;
   }
 
-  /* line 285, ../scss/aram.scss */
+  /* line 315, ../scss/aram.scss */
   section {
     margin: 30px 0 20px;
     padding: 10px;
     background: transparent !important;
   }
 
-  /* line 291, ../scss/aram.scss */
+  /* line 321, ../scss/aram.scss */
   p {
     font-size: 13px;
   }
 
-  /* line 295, ../scss/aram.scss */
+  /* line 325, ../scss/aram.scss */
   #background {
     background-image: url("../aram/img/background_sp.jpg");
   }
 
-  /* line 299, ../scss/aram.scss */
+  /* line 329, ../scss/aram.scss */
   #soraka, #lulu {
     background-image: none;
   }
 
-  /* line 303, ../scss/aram.scss */
+  /* line 333, ../scss/aram.scss */
   #top {
     height: 100vh;
     margin: 0;
   }
-  /* line 306, ../scss/aram.scss */
+  /* line 336, ../scss/aram.scss */
   #top #logo {
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  /* line 338, ../scss/aram.scss */
+  #top .button {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  /* line 341, ../scss/aram.scss */
+  #top .button:hover {
+    transform: translate(-50%, -50%) scale(1);
   }
 
-  /* line 309, ../scss/aram.scss */
+  /* line 347, ../scss/aram.scss */
   .image-title {
     top: -30px;
   }
 
-  /* line 313, ../scss/aram.scss */
+  /* line 351, ../scss/aram.scss */
   .box {
     position: static !important;
     width: auto !important;
@@ -861,22 +899,22 @@ p {
     padding: 60px 25px 25px !important;
     margin: 0 !important;
   }
-  /* line 320, ../scss/aram.scss */
+  /* line 358, ../scss/aram.scss */
   .box br {
     display: none;
   }
 
-  /* line 324, ../scss/aram.scss */
+  /* line 362, ../scss/aram.scss */
   #questions .box {
     margin-top: -10px !important;
   }
 
-  /* line 327, ../scss/aram.scss */
+  /* line 365, ../scss/aram.scss */
   .jq-fadein {
     opacity: 1 !important;
   }
 }
-/* line 340, ../scss/aram.scss */
+/* line 378, ../scss/aram.scss */
 .aram-form {
   background: rgba(255, 255, 255, 0.95);
   position: relative;
@@ -886,39 +924,39 @@ p {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(54, 56, 70, 0.05);
 }
-/* line 349, ../scss/aram.scss */
+/* line 387, ../scss/aram.scss */
 .aram-form .title {
   font-size: 18px;
   margin: 0 0 20px;
 }
-/* line 354, ../scss/aram.scss */
+/* line 392, ../scss/aram.scss */
 .aram-form .grid-form {
   -ms-grid-colmuns: 180px 420px;
   grid-template-columns: 180px 420px;
   margin-top: 30px;
 }
-/* line 359, ../scss/aram.scss */
+/* line 397, ../scss/aram.scss */
 .aram-form .grid-form > label {
   font-size: 13px;
   color: #6e7f99;
   font-weight: 600;
   margin-left: 0;
 }
-/* line 367, ../scss/aram.scss */
+/* line 405, ../scss/aram.scss */
 .aram-form input, .aram-form textarea {
   background: #fff;
   border: 1px solid rgba(110, 127, 153, 0.2);
 }
-/* line 371, ../scss/aram.scss */
+/* line 409, ../scss/aram.scss */
 .aram-form input:focus, .aram-form textarea:focus {
   border: 1px solid #3ec9f4;
 }
-/* line 376, ../scss/aram.scss */
+/* line 414, ../scss/aram.scss */
 .aram-form .btn_f-blue {
   margin: 20px 0 0;
   background: #3ec9f4;
 }
-/* line 381, ../scss/aram.scss */
+/* line 419, ../scss/aram.scss */
 .aram-form .nunu {
   position: absolute;
   bottom: -40px;
@@ -927,7 +965,7 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 390, ../scss/aram.scss */
+  /* line 428, ../scss/aram.scss */
   .aram-form {
     background: #fff;
     margin: 0;
@@ -935,21 +973,21 @@ p {
     width: 100%;
     padding: 40px 20px;
   }
-  /* line 397, ../scss/aram.scss */
+  /* line 435, ../scss/aram.scss */
   .aram-form br {
     display: none;
   }
-  /* line 399, ../scss/aram.scss */
+  /* line 437, ../scss/aram.scss */
   .aram-form .grid-form > label {
     display: block;
     margin-bottom: 3px;
   }
 }
-/* line 411, ../scss/aram.scss */
+/* line 449, ../scss/aram.scss */
 .sub-header {
   height: 250px;
 }
-/* line 414, ../scss/aram.scss */
+/* line 452, ../scss/aram.scss */
 .sub-header .image {
   position: fixed;
   z-index: 1;
@@ -960,7 +998,7 @@ p {
   width: 100vw;
 }
 
-/* line 425, ../scss/aram.scss */
+/* line 463, ../scss/aram.scss */
 #circles {
   background: #fff;
   position: relative;
@@ -968,39 +1006,39 @@ p {
   padding: 60px 0;
   border-top: 8px solid #363846;
 }
-/* line 432, ../scss/aram.scss */
+/* line 470, ../scss/aram.scss */
 #circles .image-title {
   left: 0;
   top: -85px;
   z-index: 1;
 }
-/* line 438, ../scss/aram.scss */
+/* line 476, ../scss/aram.scss */
 #circles .box {
   position: relative;
   margin: 0 auto;
   padding: 0 20px;
   width: 1040px;
 }
-/* line 445, ../scss/aram.scss */
+/* line 483, ../scss/aram.scss */
 #circles h3 {
   margin-top: 60px !important;
 }
-/* line 449, ../scss/aram.scss */
+/* line 487, ../scss/aram.scss */
 #circles .member-list {
   margin: -10px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 355px 355px 355px 355px 355px 355px 355px;
-  grid-template-rows: 355px 355px 355px 355px 355px 355px 355px;
+  -ms-grid-rows: 355px 355px 355px 355px 355px 355px 355px 355px;
+  grid-template-rows: 355px 355px 355px 355px 355px 355px 355px 355px;
   -ms-grid-colmuns: 200px 200px 200px 200px 200px;
   grid-template-columns: 200px 200px 200px 200px 200px;
 }
-/* line 458, ../scss/aram.scss */
+/* line 496, ../scss/aram.scss */
 #circles .member-list li {
   margin: 10px;
   position: relative;
 }
-/* line 464, ../scss/aram.scss */
+/* line 502, ../scss/aram.scss */
 #circles .image {
   display: block;
   text-align: center;
@@ -1016,69 +1054,69 @@ p {
   transition: 0.2s;
   text-decoration: none !important;
 }
-/* line 479, ../scss/aram.scss */
+/* line 517, ../scss/aram.scss */
 #circles .image:hover {
   opacity: 0.7;
 }
-/* line 482, ../scss/aram.scss */
+/* line 520, ../scss/aram.scss */
 #circles h3 {
   font-size: 13px;
   color: #363846;
   margin: 15px 0 10px !important;
 }
-/* line 488, ../scss/aram.scss */
+/* line 526, ../scss/aram.scss */
 #circles .summary {
   font-size: 11px;
   letter-spacing: 0;
   text-align: justify;
   line-height: 18px;
 }
-/* line 495, ../scss/aram.scss */
+/* line 533, ../scss/aram.scss */
 #circles .links {
   position: absolute;
   bottom: 0;
 }
-/* line 500, ../scss/aram.scss */
+/* line 538, ../scss/aram.scss */
 #circles .links a {
   transition: 0.1s;
 }
-/* line 502, ../scss/aram.scss */
+/* line 540, ../scss/aram.scss */
 #circles .links a:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 480px) {
-  /* line 508, ../scss/aram.scss */
+  /* line 546, ../scss/aram.scss */
   #circles {
     padding: 30px 0;
     background: #fff !important;
     margin: 0;
   }
-  /* line 513, ../scss/aram.scss */
+  /* line 551, ../scss/aram.scss */
   #circles .image-title {
     top: -40px;
     left: 5px;
   }
-  /* line 518, ../scss/aram.scss */
+  /* line 556, ../scss/aram.scss */
   #circles .box {
     padding: 0 20px !important;
   }
-  /* line 522, ../scss/aram.scss */
+  /* line 560, ../scss/aram.scss */
   #circles .member-list {
     grid-template-rows: auto;
     grid-template-columns: 50% 50%;
   }
-  /* line 525, ../scss/aram.scss */
+  /* line 563, ../scss/aram.scss */
   #circles .member-list li {
     margin: 8px;
   }
-  /* line 528, ../scss/aram.scss */
+  /* line 566, ../scss/aram.scss */
   #circles .image {
     width: 100%;
     height: 150px;
     line-height: 150px;
   }
-  /* line 534, ../scss/aram.scss */
+  /* line 572, ../scss/aram.scss */
   #circles .links {
     display: none;
   }
