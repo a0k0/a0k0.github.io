@@ -1028,8 +1028,8 @@ p {
   margin: -10px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 355px 355px 355px 355px 355px 355px 355px 355px 355px;
-  grid-template-rows: 355px 355px 355px 355px 355px 355px 355px 355px 355px;
+  -ms-grid-rows: 355px 355px 355px 355px 355px 355px 355px 355px 355px 355px;
+  grid-template-rows: 355px 355px 355px 355px 355px 355px 355px 355px 355px 355px;
   -ms-grid-colmuns: 200px 200px 200px 200px 200px;
   grid-template-columns: 200px 200px 200px 200px 200px;
 }
