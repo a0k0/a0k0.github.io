@@ -488,8 +488,8 @@ p {
     margin: -10px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 355px 355px 355px 355px 355px 355px 355px 355px 355px 355px;
-    grid-template-rows: 355px 355px 355px 355px 355px 355px 355px 355px 355px 355px;
+    -ms-grid-rows: 370px 370px 370px 370px 370px 370px 370px 370px 370px 370px;
+    grid-template-rows: 370px 370px 370px 370px 370px 370px 370px 370px 370px 370px;
     -ms-grid-colmuns: 200px 200px 200px 200px 200px;
     grid-template-columns: 200px 200px 200px 200px 200px;
 
@@ -520,7 +520,22 @@ p {
   h3 {
     font-size: 13px;
     color: $color-black;
-    margin: 15px 0 10px !important;
+    margin: 15px 0 0 !important;
+  }
+
+  .num {
+    font-size: 12px;
+    margin: 0;
+    font-weight: bold;
+    color: $color-white;
+    background: rgba($color-black, 0.8);
+    border-radius: 6px;
+    padding: 5px 7px;
+    line-height: 1em;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
   }
 
   .summary {
@@ -528,16 +543,32 @@ p {
     letter-spacing: 0;
     text-align: justify;
     line-height: 18px;
+    margin: 5px 0 7px;
   }
 
   .links {
-    position: absolute;
-    bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+    display: flex;
+
+    .oshinagaki {
+      flex: 1;
+
+      span {
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
   }
 
   .links a {
     transition: 0.1s;
+    text-decoration: none !important;
     &:hover { opacity: 0.6; }
+
+    &.link:not(:last-child) {
+      margin-right: 5px;
+    }
   }
 }
 
@@ -568,7 +599,5 @@ p {
       height: 150px;
       line-height: 150px;
     }
-
-    .links { display: none; }
   }
 }
