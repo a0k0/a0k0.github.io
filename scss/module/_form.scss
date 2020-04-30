@@ -192,7 +192,7 @@ button {
 }
 
 @media screen and (max-width : 480px){
-  .grid-form > label, .en { display: none; }
+  .grid-form > label { display: none; }
 
   .grid-form {
     display: block;

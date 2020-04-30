@@ -609,7 +609,7 @@ button {
 
 @media screen and (max-width: 480px) {
   /* line 195, ../scss/module/_form.scss */
-  .grid-form > label, .en {
+  .grid-form > label {
     display: none;
   }
 
