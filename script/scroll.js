@@ -170,6 +170,7 @@ function postCommissionToGoogle() {
   var mail = $('#commission-mail').val();
   var type = $('#commission-type').val();
   var payment = $('#commission-payment').val();
+  var url = $('#commission-url').val();
   var message = $('#commission-message').val();
   var option = '';
 
@@ -186,6 +187,7 @@ function postCommissionToGoogle() {
       "entry.1692161972": type,
       "entry.1323144998": option,
       "entry.1214845517": payment,
+      "entry.154177062": url,
       "entry.802422417": message
     },
     type: "POST",

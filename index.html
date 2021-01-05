@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  <title>poco - Aoko's works</title>
+  <title>poco - Aoko Hori's works</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="content-language" content="ja" />
 
   <meta name="description" content="イラスト／WEBデザイン／その他デザイン　各種ご依頼・お問い合わせはこちらから。" />
-  <meta property="og:title" content="poco - Aoko's works" />
+  <meta property="og:title" content="poco - Aoko Hori's works" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://a0k0.me" />
-  <meta property="og:image" content="https://a0k0.me/img/illustration/underthesea.jpg" />
+  <meta property="og:image" content="https://a0k0.me/img/illustration/lulutop.jpg" />
   <meta property="og:site_name" content="poco" />
   <meta property="og:description" content="イラスト／WEBデザイン／その他デザイン　各種ご依頼・お問い合わせはこちらから。" />
   <meta property="fb:app_id" content="227318177890145" />
@@ -34,9 +34,8 @@
 </head>
 <body>
 
-<nav class="language"><a href="/">JP</a> / <a href="/en">EN</a></nav>
 <main class="main-grid">
-  <section id="top" class="grid-col1 white" style="background-image: url('img/illustration/sugarrash.png');">
+  <section id="top" class="grid-col1 white" style="background-image: url('img/illustration/lulutop.jpg');">
     <h1 class="main-title">POCO</h1>
     <p class="main-summary">Illustration / Design</p>
     <a href="#illustration" class="scroll-down white">scroll</a>
@@ -145,21 +144,17 @@
           本業の傍ら、イラストレーター兼デザイナーとして活動中。
         </p>
         <p class="des--l">
-          SNS等個人利用でのイラストのご依頼、<br/>
-          WEBデザイン、装丁デザイン、その他法人からのご依頼等を承っております。<br/>
-          個人利用でのイラストのご依頼は「ご依頼はこちら」よりお気軽にご相談ください。<br/>
-          イラスト以外のご依頼や法人の方、その他お問い合わせは「お問い合わせ」よりご相談ください。
+          イラスト、WEBデザイン、装丁デザイン等のご依頼を受け付けています。<br/>
+          個人利用でのイラストのご依頼は「<a href="https://skeb.jp/@a0k0" target="_blank">Skeb</a>」にてご依頼ください。<br/>
+          配信用スタンプやその他デザインのご依頼は「<a onclick="openForm($('#commission'))">ご依頼・お問い合わせ</a>」よりご相談ください。
         </p>
 
-        <button class="btn_b-gray" onclick="openForm($('#commission'))">ご依頼はこちら</button>
-        <button class="btn_b-gray" onclick="openForm($('#contact'))">お問い合わせ</button>
-
-
+        <a class="btn_b-gray" href="https://skeb.jp/@a0k0" target="_blank">Skeb</a>
+        <button class="btn_b-gray" onclick="openForm($('#commission'))">ご依頼・お問い合わせ</button>
 
         <ul class="footer-nav">
           <li><a href="https://twitter.com/a0k0" target="_blank">Twitter</a></li>
-          <li><a href="https://a0k0.booth.pm/" target="_blank">通販</a></li>
-          <li><a href="https://www.pixiv.net/fanbox/creator/274516" target="_blank">PixivFANBOX</a></li>
+          <li><a href="https://a0k0.booth.pm/" target="_blank">Shop</a></li>
         </ul>
       </div>
     </div>
@@ -172,15 +167,15 @@
       <button class="back" onclick="closeForm()"></button>
       <h1 class="large-title blue">
         COMMISSION
-        <span class="large-title-subtitle">個人の方からのご依頼</span>
+        <span class="large-title-subtitle">ご依頼はこちら</span>
       </h1>
       <p class="des--l">
         1週間以内にご返信をさせていただきます。<br/>
-        以下の範囲に収まらないご依頼は別途 <button onclick="openForm($('#contact'))">CONTACT</button> よりご連絡ください。
+        SNSアイコンやイラストのリクエスト等、個人利用でのご依頼は <button onclick="openForm($('#commission'))">skeb</button> よりご依頼ください。
       </p>
       <p class="des--m">
         ※ 制作期間として、ご依頼から2週間〜2ヶ月程いただいております。<br/>
-        ※ 著作権の放棄はしておりません。ご依頼いただいた用途以外でのご使用はご遠慮ください。
+        ※ ご依頼いただいた用途以外でのご使用はご遠慮ください。
       </p>
     </div>
 
@@ -188,7 +183,7 @@
 
     <form class="section-contents grid-form">
       <label>お名前</label>
-      <input id="commission-name" class="form" type="text" placeholder="あおこ" required />
+      <input id="commission-name" class="form" type="text" placeholder="堀あおこ" required />
 
       <label>メールアドレス</label>
       <input id="commission-mail" class="form" type="email" placeholder="aoko@example.com" required />
@@ -196,22 +191,18 @@
       <label>ご依頼内容</label>
       <select id="commission-type" class="form" required>
         <option selected="selected" disabled>選択してください</option>
-        <optgroup label="SNS用 (Twitter/Discord/Twitch/Mildom等)">
-          <option value="SNS用アイコン">SNS用アイコン（500px）　¥5,000</option>
-          <option value="SNS用ヘッダー">SNS用ヘッダー（500px*1500px）　¥8,000</option>
-        </optgroup>
-        <optgroup label="配信用 (Twitch等)">
-          <option value="配信用バッジ">バッジ（~100px）　¥500/1個</option>
-          <option value="配信用スタンプ">スタンプ（~150px）　¥1,000/1個</option>
+        <optgroup label="配信用素材 (Twitch等)">
+          <option value="配信用バッジ">バッジ（~100px）　¥1,000/1個</option>
+          <option value="配信用スタンプ">スタンプ（~150px）　¥1,500/1個</option>
           <option value="配信用バナー">パネル（~640px）　¥4,000</option>
-          <option value="配信用フレーム">配信フレーム（~2000px）　¥10,000</option>
-          <option value="オフライン画面">オフラインバナー（~2000px）　¥10,000</option>
+          <option value="配信用フレーム">フレーム・背景等（~2000px）　¥10,000</option>
         </optgroup>
         <optgroup label="その他">
-          <option value="スマホ壁紙">スマホサイズ　¥8,000</option>
-          <option value="デスクトップ壁紙">デスクトップサイズ　¥10,000</option>
-          <option value="印刷用">印刷用（2000px~）　¥15,000</option>
-          <option value="色紙">色紙（10cm）　¥5,000</option>
+          <option value="その他イラスト">イラストのご依頼</option>
+          <option value="Webデザイン">Webデザインのご依頼</option>
+          <option value="装丁デザイン">装丁デザインのご依頼</option>
+          <option value="その他デザイン">その他のデザインのご依頼</option>
+          <option value="お問い合わせ">その他のお問い合わせ</option>
         </optgroup>
       </select>
 
@@ -225,8 +216,6 @@
         <label for="original">キャラクターデザイン <span class="red">(+¥5,000)</span></label>
         <input value="公開禁止" id="publication" type="checkbox" name="entry.1323144998" />
         <label for="publication">作者Twitter等での公開を禁止 <span class="red">(+20%)</span></label>
-        <input value="文字入れ" id="lettering" type="checkbox" name="entry.132314499" />
-        <label for="lettering">お名前・ID等の文字入れ <span class="blue">(無料)</span></label>
       </div>
 
       <label>お支払い方法</label>
@@ -237,50 +226,13 @@
         <option value="銀行振込">銀行振込 (¥10,000~)</option>
       </select>
 
-      <label>ご依頼の詳細</label>
+      <label>参考URL</label>
+      <input id="commission-url" class="form" type="email" placeholder="配信URL等（任意）" />
+
+      <label>詳細</label>
       <textarea id="commission-message" class="form" rows="8" placeholder="ご希望されるキャラクター/絵柄/構図など、できるだけ詳細にご記入ください。" required></textarea>
 
       <button class="btn_f-blue" type="button" onclick="postCommissionToGoogle()">送信する</button>
-    </form>
-  </aside>
-
-
-  <aside id="contact" class="grid-col2" style="display:none;">
-    <div class="section-contents">
-      <button class="back" onclick="closeForm()"></button>
-      <h1 class="large-title red">
-        CONTACT
-        <span class="large-title-subtitle">その他のお問い合わせ</span>
-      </h1>
-      <p class="des--l">
-        1週間以内にご返信をさせていただきます。<br/>
-        SNSアイコンのご依頼等、個人的なご依頼は <button onclick="openForm($('#commission'))">こちら</button> よりご依頼ください。
-      </p>
-    </div>
-
-    <hr />
-
-    <form class="section-contents grid-form">
-      <label>お名前</label>
-      <input id="contact-name" class="form" type="text" placeholder="あおこ" />
-
-      <label>メールアドレス</label>
-      <input id="contact-mail" class="form" type="email" placeholder="aoko@example.com" />
-
-      <label>お問い合わせ内容</label>
-      <select id="contact-type" class="form">
-        <option selected="selected" disabled>選択してください</option>
-        <option value="イラストのご依頼">イラストのご依頼</option>
-        <option value="WEBデザインのご依頼">WEBデザインのご依頼</option>
-        <option value="装丁デザインのご依頼">装丁デザインのご依頼</option>
-        <option value="その他デザインのご依頼">その他のデザインのご依頼</option>
-        <option value="その他のお問い合わせ">その他のお問い合わせ</option>
-      </select>
-
-      <label>詳細</label>
-      <textarea id="contact-message" class="form" rows="8" placeholder="できるだけ詳細にご記入ください。"></textarea>
-
-      <button class="btn_f-blue" type="button" onclick="postContactToGoogle()">送信する</button>
     </form>
   </aside>
 
