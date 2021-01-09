@@ -1,0 +1,498 @@
+@import "../../scss/config/reset";
+@import "colors";
+
+body {
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  position: relative;
+  background: $COLOR_BASE_DEEP;
+  color: $COLOR_BASE;
+}
+
+.container {
+  height: calc(100vh - 40px);
+  margin: 20px;
+  padding: 20px;
+  background: $COLOR_BASE_BLIGHT;
+  border-radius: 10px;
+}
+
+.sidebar {
+  width: 190px;
+  border-right: 1px solid $COLOR_BASE_LIGHT;
+  margin-right: 20px;
+  overflow-y: auto;
+  padding: 10px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .contents {
+    flex: 1;
+  }
+
+  .credit {
+    padding: 5px;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .crews > li {
+    font-size: 13px;
+
+    label {
+      display: block;
+      cursor: pointer;
+      padding: 5px 8px;
+      border-radius: 8px;
+      transition: 0.1s;
+      position: relative;
+
+      &:hover {
+        background: $COLOR_BASE_PALE;
+      }
+    }
+
+    .status {
+      width: 16px;
+      height: 16px;
+      border-radius: 10px;
+      position: absolute;
+      right: 10px;
+      top: 9px;
+
+      &.crewmate {
+        border: 1px solid $COLOR_BASE_LIGHT;
+      }
+
+      &.gray {
+        background: $COLOR_BASE_LIGHT;
+      }
+
+      &.imposter {
+        background: $COLOR_ATTENTION;
+      }
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .text {
+      &::after {
+        content: "Dead";
+        color: $COLOR_BASE_LIGHT;
+        display: block;
+        height: 25px;
+        line-height: 25px;
+        padding-left: 32px;
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &.red::after {
+        background-image: url("../img/red_die.png");
+      }
+
+      &.blue::after {
+        background-image: url("../img/blue_die.png");
+      }
+
+      &.cyan::after {
+        background-image: url("../img/cyan_die.png");
+      }
+
+      &.green::after {
+        background-image: url("../img/green_die.png");
+      }
+
+      &.lime::after {
+        background-image: url("../img/lime_die.png");
+      }
+
+      &.yellow::after {
+        background-image: url("../img/yellow_die.png");
+      }
+
+      &.orange::after {
+        background-image: url("../img/orange_die.png");
+      }
+
+      &.brown::after {
+        background-image: url("../img/brown_die.png");
+      }
+
+      &.pink::after {
+        background-image: url("../img/pink_die.png");
+      }
+
+      &.purple::after {
+        background-image: url("../img/purple_die.png");
+      }
+
+      &.white::after {
+        background-image: url("../img/white_die.png");
+      }
+
+      &.black::after {
+        background-image: url("../img/black_die.png");
+      }
+    }
+
+    input:checked {
+      + .text::after {
+        content: "Alive";
+        color: $COLOR_BASE;
+      }
+
+      + .red::after {
+        background-image: url("../img/red.png");
+      }
+
+      + .blue::after {
+        background-image: url("../img/blue.png");
+      }
+
+      + .cyan::after {
+        background-image: url("../img/cyan.png");
+      }
+
+      + .green::after {
+        background-image: url("../img/green.png");
+      }
+
+      + .lime::after {
+        background-image: url("../img/lime.png");
+      }
+
+      + .yellow::after {
+        background-image: url("../img/yellow.png");
+      }
+
+      + .orange::after {
+        background-image: url("../img/orange.png");
+      }
+
+      + .brown::after {
+        background-image: url("../img/brown.png");
+      }
+
+      + .pink::after {
+        background-image: url("../img/pink.png");
+      }
+
+      + .purple::after {
+        background-image: url("../img/purple.png");
+      }
+
+      + .white::after {
+        background-image: url("../img/white.png");
+      }
+
+      + .black::after {
+        background-image: url("../img/black.png");
+      }
+    }
+  }
+}
+
+.main_title {
+  font-size: 19px;
+  line-height: 1em;
+  font-weight: bold;
+  margin: 0 10px 25px;
+
+  .num {
+    font-weight: normal;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+}
+
+.sub_title {
+  font-size: 16px;
+  line-height: 1em;
+  font-weight: bold;
+  margin: 40px 0 20px;
+}
+
+a,
+.text_button {
+  -webkit-appearance: none;
+  appearance: none;
+  color: $COLOR_BASE_LIGHT;
+  font-weight: bold;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button {
+  color: $COLOR_PRIMARY;
+  border: 2px solid $COLOR_PRIMARY;
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: bold;
+  text-align: center;
+  background: $COLOR_BASE_BLIGHT;
+  border-radius: 30px;
+  display: block;
+  width: 160px;
+  outline: 0;
+  cursor: pointer;
+  margin: 20px auto 0;
+
+  &:hover {
+    background: $COLOR_BASE_PALE;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.edit_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.main_container {
+  height: 100%;
+  display: flex;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  margin-right: -10px;
+  padding: 10px 20px 0 5px;
+
+  .free_note {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.notes > li {
+  display: flex;
+  margin-bottom: 20px;
+
+  .dead {
+    display: none;
+  }
+
+  &.dead {
+    input,
+    textarea {
+      background: $COLOR_BASE_PALE;
+    }
+
+    .alive {
+      display: none;
+    }
+
+    .dead {
+      display: block;
+    }
+  }
+
+  .crew {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin: 0 20px 10px 0;
+
+    img {
+      width: 40px;
+      margin-right: 10px;
+      transition: 0.1s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    input {
+      flex: 1;
+      width: 100%;
+    }
+  }
+
+  .radios {
+    padding-left: 45px;
+
+    label {
+      display: block;
+      font-size: 14px;
+      margin: 3px 0 0 5px;
+      cursor: pointer;
+
+      &:hover {
+        color: $COLOR_PRIMARY_PALE;
+      }
+    }
+
+    input[type="radio"] {
+      margin-right: 3px;
+    }
+  }
+
+  .note {
+    flex: 1;
+
+    textarea {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+input,
+textarea {
+  background: transparent;
+  border: 2px solid $COLOR_BASE_LIGHT;
+  outline: 0;
+  color: $COLOR_BASE;
+  padding: 10px 8px;
+  font-size: 13px;
+  border-radius: 8px;
+  transition: 0.1s;
+  resize: vertical;
+
+  &:hover {
+    border-color: $COLOR_PRIMARY_PALE;
+  }
+
+  &:focus {
+   border-color: $COLOR_PRIMARY;
+  }
+}
+
+textarea {
+  line-height: 1.5em;
+  padding: 10px 12px;
+}
+
+
+.edit_crews {
+  flex: 1;
+  overflow-y: auto;
+
+  .crews {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 390px;
+  }
+
+  .crews > li {
+    font-size: 13px;
+
+    label {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 45px;
+      transition: 0.1s;
+
+      &:hover {
+        background: $COLOR_BASE_PALE;
+      }
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .text {
+      &::after {
+        content: "";
+        display: block;
+        color: $COLOR_BASE_LIGHT;
+        height: 45px;
+        width: 45px;
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.3;
+      }
+
+      &.red::after {
+        background-image: url("../img/red.png");
+      }
+
+      &.blue::after {
+        background-image: url("../img/blue.png");
+      }
+
+      &.cyan::after {
+        background-image: url("../img/cyan.png");
+      }
+
+      &.green::after {
+        background-image: url("../img/green.png");
+      }
+
+      &.lime::after {
+        background-image: url("../img/lime.png");
+      }
+
+      &.yellow::after {
+        background-image: url("../img/yellow.png");
+      }
+
+      &.orange::after {
+        background-image: url("../img/orange.png");
+      }
+
+      &.brown::after {
+        background-image: url("../img/brown.png");
+      }
+
+      &.pink::after {
+        background-image: url("../img/pink.png");
+      }
+
+      &.purple::after {
+        background-image: url("../img/purple.png");
+      }
+
+      &.white::after {
+        background-image: url("../img/white.png");
+      }
+
+      &.black::after {
+        background-image: url("../img/black.png");
+      }
+    }
+
+    input:checked + .text::after {
+      opacity: 1;
+    }
+  }
+}
+
+// for js
+
+.wrapper {
+  display: none;
+}

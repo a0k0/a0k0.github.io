@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <title>Among Us Note</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-language" content="ja" />
+
+  <meta name="description" content="Among Us用のメモ帳です。キャラクターごとにメモが残せます。会議中にご利用ください。" />
+  <meta property="og:title" content="Among Us Note" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://a0k0.me/amongus" />
+  <meta property="og:image" content="https://a0k0.me/img/illustration/lulutop.jpg" />
+  <meta property="og:site_name" content="poco" />
+  <meta property="og:description" content="Among Us用のメモ帳です。キャラクターごとにメモが残せます。会議中にご利用ください。" />
+  <meta property="fb:app_id" content="227318177890145" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@a0k0" />
+  <meta name="twitter:player" content="@a0k0" />
+
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122073463-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-122073463-1');
+  </script>
+</head>
+<body>
+
+<div class="wrapper container">
+  <div id="notes" class="main_container" >
+
+    <header class="sidebar">
+      <div class="contents">
+        <h1 class="main_title">Among Us Note</h1>
+        <ul id="player_list" class="crews">
+          <li id="player_red">
+            <label>
+              <input type="checkbox" value="red" checked />
+              <div class="text red"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_blue">
+            <label>
+              <input type="checkbox" value="blue" checked />
+              <div class="text blue"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_cyan">
+            <label>
+              <input type="checkbox" value="cyan" checked />
+              <div class="text cyan"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_green">
+            <label>
+              <input type="checkbox" value="green" checked />
+              <div class="text green"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_lime">
+            <label>
+              <input type="checkbox" value="lime" checked />
+              <div class="text lime"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_orange">
+            <label>
+              <input type="checkbox" value="orange" checked />
+              <div class="text orange"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_yellow">
+            <label>
+              <input type="checkbox" value="yellow" checked />
+              <div class="text yellow"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_pink">
+            <label>
+              <input type="checkbox" value="pink" checked />
+              <div class="text pink"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_purple">
+            <label>
+              <input type="checkbox" value="purple" checked />
+              <div class="text purple"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_brown">
+            <label>
+              <input type="checkbox" value="brown" checked />
+              <div class="text brown"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_white">
+            <label>
+              <input type="checkbox" value="white" checked />
+              <div class="text white"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+          <li id="player_black">
+            <label>
+              <input type="checkbox" value="black" checked />
+              <div class="text black"></div>
+              <span class="status"></span>
+            </label>
+          </li>
+        </ul>
+
+        <button id="reset_btn" class="button">
+          New game
+        </button>
+        <button id="edit_btn" class="button" style="margin-top:10px;">
+          Select players
+        </button>
+      </div>
+
+      <!-- <h2 class="sub_title">MAP</h2>
+      <button class="text_button">Skeled</button>
+      <button class="text_button">Skeled</button>
+      <button class="text_button">Skeled</button> -->
+
+      <p class="credit">
+        <a href="https://twitter.com/a0k0" target="_blank">@a0k0</a>
+      </p>
+    </header>
+
+      <div class="main">
+        <textarea class="free_note" rows="8" placeholder="Free note"></textarea>
+        <ul id="note_list" class="notes">
+          <li id="note_red">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/red.png" />
+                <img class="dead" src="img/red_die.png" />
+                <input type="text" value="Red" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="red_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="red_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="red_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="red_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_blue">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/blue.png" />
+                <img class="dead" src="img/blue_die.png" />
+                <input type="text" value="Blue" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="blue_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="blue_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="blue_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="blue_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_cyan">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/cyan.png" />
+                <img class="dead" src="img/cyan_die.png" />
+                <input type="text" value="Cyan" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="cyan_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="cyan_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="cyan_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="cyan_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_green">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/green.png" />
+                <img class="dead" src="img/green_die.png" />
+                <input type="text" value="Green" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="green_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="green_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="green_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="green_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_lime">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/lime.png" />
+                <img class="dead" src="img/lime_die.png" />
+                <input type="text" value="Lime" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="lime_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="lime_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="lime_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="lime_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_orange">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/orange.png" />
+                <img class="dead" src="img/orange_die.png" />
+                <input type="text" value="Orange" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="orange_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="orange_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="orange_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="orange_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_yellow">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/yellow.png" />
+                <img class="dead" src="img/yellow_die.png" />
+                <input type="text" value="Yellow" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="yellow_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="yellow_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="yellow_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="yellow_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_pink">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/pink.png" />
+                <img class="dead" src="img/pink_die.png" />
+                <input type="text" value="Pink" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="pink_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="pink_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="pink_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="pink_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_purple">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/purple.png" />
+                <img class="dead" src="img/purple_die.png" />
+                <input type="text" value="Purple" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="purple_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="purple_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="purple_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="purple_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_brown">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/brown.png" />
+                <img class="dead" src="img/brown_die.png" />
+                <input type="text" value="Brown" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="brown_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="brown_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="brown_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="brown_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_white">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/white.png" />
+                <img class="dead" src="img/white_die.png" />
+                <input type="text" value="White" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="white_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="white_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="white_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="white_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+
+          <li id="note_black">
+            <div class="info">
+              <div class="crew">
+                <img class="alive" src="img/black.png" />
+                <img class="dead" src="img/black_die.png" />
+                <input type="text" value="Black" placeholder="name" />
+              </div>
+              <div class="radios">
+                <label>
+                  <input name="black_radio" type="radio"value="neutral" checked />
+                  Neutral
+                </label>
+                <label>
+                  <input name="black_radio" type="radio" value="crewmate" />
+                  Crewmate
+                </label>
+                <label>
+                  <input name="black_radio" type="radio" value="gray" />
+                  Gray
+                </label>
+                <label>
+                  <input name="black_radio" type="radio" value="imposter" />
+                  Imposter
+                </label>
+              </div>
+            </div>
+            <div class="note">
+              <textarea></textarea>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <div id="editor" class="edit_container">
+    <div class="edit_crews">
+      <h2 class="main_title">
+        Select players
+        <span class="num">(<span id="count">0</span>/10)</span>
+      </h2>
+      <ul id="players_selecter" class="crews">
+        <li>
+          <label>
+            <input type="checkbox" value="red" />
+            <div class="text red"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="blue" />
+            <div class="text blue"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="cyan" />
+            <div class="text cyan"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="green" />
+            <div class="text green"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="lime" />
+            <div class="text lime"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="orange" />
+            <div class="text orange"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="yellow" />
+            <div class="text yellow"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="pink" />
+            <div class="text pink"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="purple" />
+            <div class="text purple"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="brown" />
+            <div class="text brown"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="white" />
+            <div class="text white"></div>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="black" />
+            <div class="text black"></div>
+          </label>
+        </li>
+      </ul>
+
+      <button id="save_btn" class="button">
+        OK
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+  window.onbeforeunload = function(e) {
+    return '<!> ページを更新すると入力したメモが削除されます。よろしいですか？';
+  };
+
+  $(function() {
+
+    //init -----
+    $('#notes').hide();
+    $('#player_list li').hide();
+    $('#note_list li').hide();
+    $('.wrapper').fadeIn();
+    $('#save_btn').prop('disabled', true);
+
+    //-----------
+
+    $('#save_btn').click(function() {
+      $('#editor').fadeOut(50, function() {
+        $('#notes').fadeIn(300);
+      });
+    });
+
+    $('#edit_btn').click(function() {
+      $('#notes').fadeOut(50, function() {
+        $('#editor').fadeIn(300);
+      });
+    });
+
+    $('#reset_btn').click(function() {
+      $('#notes').fadeOut(200, function() {
+        $('#player_list input').prop('checked', true);
+        $('#player_list .status').removeClass('crewmate gray imposter neutral');
+        $('#notes .free_note').val('');
+        $('#note_list textarea').val('');
+        $('#note_list .radios input').val(['neutral']);
+        $('#note_list li').removeClass('dead');
+        $('#notes').delay(500);
+        $('#notes').fadeIn(300);
+      });
+    });
+
+    $('#player_list input').change(function() {
+        var player_color = $(this).val();
+
+        if ($(this).prop('checked')) {
+          live(player_color);
+        } else {
+          die(player_color);
+        }
+    });
+
+    $('#note_list img.alive').click(function() {
+      var note_color = $(this).parent().parent().parent().attr('id').replace('note_', '');
+      die(note_color);
+    });
+
+    $('#note_list img.dead').click(function() {
+      var note_color = $(this).parent().parent().parent().attr('id').replace('note_', '');
+      live(note_color);
+    });
+
+    $('#note_list input[type=radio]').change(function() {
+        var status = $(this).val();
+        var status_color = $(this).parent().parent().parent().parent().attr('id').replace('note_', '');
+        var status_elm = $('#player_list').find('#player_' + status_color).find('.status');
+
+        status_elm.removeClass('crewmate gray imposter neutral');
+        status_elm.addClass(status);
+    });
+
+    $('#players_selecter input').change(function() {
+        var selected_color = $(this).val();
+        var count = $('#players_selecter input:checked').length;
+
+        $('#count').text(count);
+
+        if ($(this).prop('checked')) {
+          $('#player_list').find('#player_' + selected_color).show();
+          $('#note_list').find('#note_' + selected_color).show();
+        } else {
+          $('#player_list').find('#player_' + selected_color).hide();
+          $('#note_list').find('#note_' + selected_color).hide();
+        }
+
+        if (count < 3 || count > 10) {
+          $('#save_btn').prop('disabled', true);
+        } else {
+          $('#save_btn').prop('disabled', false);
+        }
+    });
+
+    function die(color) {
+      $('#note_list').find('#note_' + color).addClass('dead');
+      $('#player_list').find('#player_' + color).find('input').prop('checked', false);
+    }
+
+    function live(color) {
+      $('#note_list').find('#note_' + color).removeClass('dead');
+      $('#player_list').find('#player_' + color).find('input').prop('checked', true);
+    }
+  });
+
+</script>
+
+
+</body>
+</html>
