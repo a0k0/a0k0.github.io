@@ -271,91 +271,94 @@ body {
 .sidebar .crews > li input[type=checkbox] {
   display: none;
 }
-.sidebar .crews > li .text::after {
-  content: "Dead";
-  color: #bac3df;
-  display: block;
-  height: 25px;
-  line-height: 25px;
+.sidebar .crews > li .text {
   padding-left: 32px;
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
+  display: block;
+  height: 25px;
 }
-.sidebar .crews > li .text.red::after {
+.sidebar .crews > li .text::after {
+  content: "(dead)";
+  color: #bac3df;
+  line-height: 25px;
+  margin-left: 8px;
+}
+.sidebar .crews > li .text.red {
   background-image: url("../img/red_die.png");
 }
-.sidebar .crews > li .text.blue::after {
+.sidebar .crews > li .text.blue {
   background-image: url("../img/blue_die.png");
 }
-.sidebar .crews > li .text.cyan::after {
+.sidebar .crews > li .text.cyan {
   background-image: url("../img/cyan_die.png");
 }
-.sidebar .crews > li .text.green::after {
+.sidebar .crews > li .text.green {
   background-image: url("../img/green_die.png");
 }
-.sidebar .crews > li .text.lime::after {
+.sidebar .crews > li .text.lime {
   background-image: url("../img/lime_die.png");
 }
-.sidebar .crews > li .text.yellow::after {
+.sidebar .crews > li .text.yellow {
   background-image: url("../img/yellow_die.png");
 }
-.sidebar .crews > li .text.orange::after {
+.sidebar .crews > li .text.orange {
   background-image: url("../img/orange_die.png");
 }
-.sidebar .crews > li .text.brown::after {
+.sidebar .crews > li .text.brown {
   background-image: url("../img/brown_die.png");
 }
-.sidebar .crews > li .text.pink::after {
+.sidebar .crews > li .text.pink {
   background-image: url("../img/pink_die.png");
 }
-.sidebar .crews > li .text.purple::after {
+.sidebar .crews > li .text.purple {
   background-image: url("../img/purple_die.png");
 }
-.sidebar .crews > li .text.white::after {
+.sidebar .crews > li .text.white {
   background-image: url("../img/white_die.png");
 }
-.sidebar .crews > li .text.black::after {
+.sidebar .crews > li .text.black {
   background-image: url("../img/black_die.png");
 }
 .sidebar .crews > li input:checked + .text::after {
-  content: "Alive";
+  content: "";
   color: #111923;
 }
-.sidebar .crews > li input:checked + .red::after {
+.sidebar .crews > li input:checked + .red {
   background-image: url("../img/red.png");
 }
-.sidebar .crews > li input:checked + .blue::after {
+.sidebar .crews > li input:checked + .blue {
   background-image: url("../img/blue.png");
 }
-.sidebar .crews > li input:checked + .cyan::after {
+.sidebar .crews > li input:checked + .cyan {
   background-image: url("../img/cyan.png");
 }
-.sidebar .crews > li input:checked + .green::after {
+.sidebar .crews > li input:checked + .green {
   background-image: url("../img/green.png");
 }
-.sidebar .crews > li input:checked + .lime::after {
+.sidebar .crews > li input:checked + .lime {
   background-image: url("../img/lime.png");
 }
-.sidebar .crews > li input:checked + .yellow::after {
+.sidebar .crews > li input:checked + .yellow {
   background-image: url("../img/yellow.png");
 }
-.sidebar .crews > li input:checked + .orange::after {
+.sidebar .crews > li input:checked + .orange {
   background-image: url("../img/orange.png");
 }
-.sidebar .crews > li input:checked + .brown::after {
+.sidebar .crews > li input:checked + .brown {
   background-image: url("../img/brown.png");
 }
-.sidebar .crews > li input:checked + .pink::after {
+.sidebar .crews > li input:checked + .pink {
   background-image: url("../img/pink.png");
 }
-.sidebar .crews > li input:checked + .purple::after {
+.sidebar .crews > li input:checked + .purple {
   background-image: url("../img/purple.png");
 }
-.sidebar .crews > li input:checked + .white::after {
+.sidebar .crews > li input:checked + .white {
   background-image: url("../img/white.png");
 }
-.sidebar .crews > li input:checked + .black::after {
+.sidebar .crews > li input:checked + .black {
   background-image: url("../img/black.png");
 }
 

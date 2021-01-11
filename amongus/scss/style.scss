@@ -84,118 +84,120 @@ body {
     }
 
     .text {
+      padding-left: 32px;
+      background-position: left;
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      height: 25px;
+
       &::after {
-        content: "Dead";
+        content: "(dead)";
         color: $COLOR_BASE_LIGHT;
-        display: block;
-        height: 25px;
         line-height: 25px;
-        padding-left: 32px;
-        background-position: left;
-        background-size: contain;
-        background-repeat: no-repeat;
+        margin-left: 8px;
       }
 
-      &.red::after {
+      &.red {
         background-image: url("../img/red_die.png");
       }
 
-      &.blue::after {
+      &.blue {
         background-image: url("../img/blue_die.png");
       }
 
-      &.cyan::after {
+      &.cyan {
         background-image: url("../img/cyan_die.png");
       }
 
-      &.green::after {
+      &.green {
         background-image: url("../img/green_die.png");
       }
 
-      &.lime::after {
+      &.lime {
         background-image: url("../img/lime_die.png");
       }
 
-      &.yellow::after {
+      &.yellow {
         background-image: url("../img/yellow_die.png");
       }
 
-      &.orange::after {
+      &.orange {
         background-image: url("../img/orange_die.png");
       }
 
-      &.brown::after {
+      &.brown {
         background-image: url("../img/brown_die.png");
       }
 
-      &.pink::after {
+      &.pink {
         background-image: url("../img/pink_die.png");
       }
 
-      &.purple::after {
+      &.purple {
         background-image: url("../img/purple_die.png");
       }
 
-      &.white::after {
+      &.white {
         background-image: url("../img/white_die.png");
       }
 
-      &.black::after {
+      &.black {
         background-image: url("../img/black_die.png");
       }
     }
 
     input:checked {
       + .text::after {
-        content: "Alive";
+        content: "";
         color: $COLOR_BASE;
       }
 
-      + .red::after {
+      + .red {
         background-image: url("../img/red.png");
       }
 
-      + .blue::after {
+      + .blue {
         background-image: url("../img/blue.png");
       }
 
-      + .cyan::after {
+      + .cyan {
         background-image: url("../img/cyan.png");
       }
 
-      + .green::after {
+      + .green {
         background-image: url("../img/green.png");
       }
 
-      + .lime::after {
+      + .lime {
         background-image: url("../img/lime.png");
       }
 
-      + .yellow::after {
+      + .yellow {
         background-image: url("../img/yellow.png");
       }
 
-      + .orange::after {
+      + .orange {
         background-image: url("../img/orange.png");
       }
 
-      + .brown::after {
+      + .brown {
         background-image: url("../img/brown.png");
       }
 
-      + .pink::after {
+      + .pink {
         background-image: url("../img/pink.png");
       }
 
-      + .purple::after {
+      + .purple {
         background-image: url("../img/purple.png");
       }
 
-      + .white::after {
+      + .white {
         background-image: url("../img/white.png");
       }
 
-      + .black::after {
+      + .black {
         background-image: url("../img/black.png");
       }
     }
