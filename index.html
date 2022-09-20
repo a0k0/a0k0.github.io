@@ -141,7 +141,7 @@
         <p class="des--l">
           1992年2月2日 静岡生まれ。<br/>
           桑沢デザイン研究所を卒業後、都内でWEBデザイナーとして勤務。<br/>
-          本業の傍ら、イラストレーター兼デザイナーとして活動中。
+          現在は独立し、フリーランスのイラストレーター兼デザイナーとして活動中。
         </p>
         <p class="des--l">
           イラスト、WEBデザイン、装丁デザイン等のご依頼を受け付けています。<br/>
@@ -170,11 +170,11 @@
         <span class="large-title-subtitle">ご依頼はこちら</span>
       </h1>
       <p class="des--l">
-        1週間以内にご返信をさせていただきます。<br/>
-        SNSアイコンやイラストのリクエスト等、個人利用でのご依頼は <button onclick="openForm($('#commission'))">skeb</button> よりご依頼ください。
+        1週間以内にご返信させていただきます。<br/>
+        SNSアイコンやイラストのリクエスト等、個人利用でのご依頼は <a href="https://skeb.jp/@a0k0" target="_blank" style="text-decoration:underline">skeb</a> よりご依頼ください。<br/>
+        料金等、詳しくは <a href="https://note.com/a0k0/n/n1df24592a91d" target="_blank" style="text-decoration:underline">noteの記事</a> をご確認ください。
       </p>
       <p class="des--m">
-        ※ 制作期間として、ご依頼から2週間〜2ヶ月程いただいております。<br/>
         ※ ご依頼いただいた用途以外でのご使用はご遠慮ください。
       </p>
     </div>
@@ -192,10 +192,15 @@
       <select id="commission-type" class="form" required>
         <option selected="selected" disabled>選択してください</option>
         <optgroup label="配信用素材 (Twitch/Youtube等)">
-          <option value="配信用バッジ">バッジ　¥2,000/1個（色違い半額）</option>
+          <option value="配信用バッジ">バッジ　¥2,000/1個（色違い¥1,500）</option>
           <option value="配信用スタンプ">スタンプ　¥3,000/1個</option>
-          <option value="配信用バナー">パネル　¥4,000</option>
-          <option value="配信用フレーム">フレーム・背景等　¥10,000</option>
+          <option value="配信用バナー">パネル　¥4,000/1個（色違い¥2,000）</option>
+          <option value="配信用フレーム">フレーム・背景等　¥10,000～</option>
+        </optgroup>
+        <optgroup label="Live2Dモデル">
+          <option value="Live2D">Live2Dイラスト＋モデリング　¥40,000～</option>
+          <option value="Live2Dイラストのみ">Live2D用パーツ分けイラストのみ　¥30,000～</option>
+          <option value="Live2Dモデリングのみ">Live2Dモデリングのみ　¥20,000～</option>
         </optgroup>
         <optgroup label="その他">
           <option value="その他イラスト">イラストのご依頼</option>
@@ -205,18 +210,6 @@
           <option value="お問い合わせ">その他のお問い合わせ</option>
         </optgroup>
       </select>
-
-      <label>オプション</label>
-      <div id="commission-option" class="form checkbox">
-        <input value="背景あり" id="background" type="checkbox" />
-        <label for="background">背景描き込み <span class="red">(+30%)</span></label>
-        <input value="複数キャラ" id="multiple" type="checkbox" name="entry.1323144998" />
-        <label for="multiple">キャラクター2人以上 <span class="red">(+30%/1人)</span></label>
-        <input value="キャラデザ" id="original" type="checkbox" name="entry.1323144998" />
-        <label for="original">キャラクターデザイン <span class="red">(+¥5,000)</span></label>
-        <input value="公開禁止" id="publication" type="checkbox" name="entry.1323144998" />
-        <label for="publication">作者Twitter等での公開を禁止 <span class="red">(+20%)</span></label>
-      </div>
 
       <label>お支払い方法</label>
       <select id="commission-payment" class="form" required>
